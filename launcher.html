@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Virtual Lab</title>
+
+  <style type="text/css">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+  </style>
+
+  <script>
+    var win = null;
+
+    window.addEventListener("message", function (event) {
+
+      win = event.source;
+      if (event.data.action != undefined) {
+        if (event.data.action == "getTCConfig") {
+          sendCommitToSco();
+
+          event.source.postMessage({
+            action: 'tcConfig',
+            account: {
+              homePage: 'https://nightly-realize.realizedev.com',
+              name: 'ffffffff56a842d5e4b044ebae409d76'
+            },
+            mode: 'normal',
+            registration: '77b52fccb114497cb949e83c38c0f364',
+            endpoint: 'https://u35x1dqluc.execute-api.us-east-1.amazonaws.com/nightly/openlrs/xAPI',
+            authorization: {
+              cookie: [
+                {
+                  name: 'keebler',
+                  value: '1234-abcd-xyz1-abcd'
+                }
+              ],
+              header: [
+                {
+                  name: 'Authorization',
+                  value: 'Bearer 1dbf49c7-3114-4850-bf65-c2b8e42aaf31'
+                }
+              ],
+              expiration: 3600 // seconds
+            },
+            scaledPassingScore: 0.6,
+            completionThreshold: 1.0,
+            session: {
+              id: "776041cd-8f29-4170-b725-072196b42f09"
+            }
+          }, "*");
+        }
+        else if (event.data.action == "getAuthorization") {
+          event.source.postMessage({
+            action: 'authorization',
+            authorization: {
+              cookie: [
+                {
+                  name: 'keebler',
+                  value: '1234-abcd-xyz1-abcd'
+                }
+              ],
+              header: [
+                {
+                  name: 'Authorization',
+                  value: 'Bearer 29ddj2jdkfjdf'
+                }
+              ],
+              expiration: 3600 // seconds
+            },
+            session: {
+              id: "8975 67893"
+            }
+          }, "*");
+        }
+        else if (event.data.action == "commit") {
+          console.log("commit post message data in launcher html: ")
+          console.log(event.data.action);
+        }
+      }
+    })
+
+    function openSco(e) {
+      e.preventDefault();
+      window.open("<%= ACTIVITY_PATH %>player.html?tc=y", "_blank");
+    }
+
+    function openScoLS(e) {
+      e.preventDefault();
+      window.open("<%= ACTIVITY_PATH %>player.html?tc=y&localpersistence=true", "_blank");
+    }
+
+    function sendCommitToSco() {
+      console.log("calling sendCommitToSco")
+      setTimeout(function () {
+        win.postMessage({
+          action: 'commit'
+        }, "*");
+      }, 5000)
+    }
+  </script>
+</head>
+
+<body>
+  <a href="#" onclick="openSco(event)">Launch SCO</a>
+  <br /><br />
+  <a href="#" onclick="openScoLS(event)">Launch SCO and Test Tincan with LocalStorage</a>
+  <br /><br />
+  <a download href="<%= ZIP_PATH %>">Download Build</a>
+</body>
+
+</html>

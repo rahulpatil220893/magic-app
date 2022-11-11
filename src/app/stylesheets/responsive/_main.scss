@@ -1,0 +1,113 @@
+& {
+  .#{$app-namespace}-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    main {
+      margin-top: 30px;
+      height: calc(100% - 195px);
+
+      .#{$app-namespace}-main-container {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        // height: calc(100% - 93px);
+        // height: calc(100% - 158px);
+
+        .nav-bar-container {
+          height: 100%;
+          width: 100%;
+
+          .vl-tabs-component {
+            height: 100%;
+            width: 100%;
+
+            .tab-base {
+              height: 100%;
+              width: 100%;
+
+              .tab-panels {
+                height: calc(100% - 52px);
+                width: calc(100% - 150px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .#{$app-namespace}-next-button-container {
+      position: relative;
+      pointer-events: none;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .#{$app-namespace}-next-button {
+        cursor: pointer;
+        pointer-events: auto;
+        // &.active {
+        //   background: #1269d6;
+        //   color: #fff;
+        // }
+
+        &.#{$app-namespace}-globalbutton {
+          -webkit-transition: none;
+          -moz-transition: none;
+          transition: none;
+        }
+      }
+    }
+
+    .#{$app-namespace}-globalbutton {
+      font-size: 23px;
+      color: #1269d6;
+      line-height: 29px;
+      background: #fff;
+     // background-color: #1269D6;
+      pointer-events: auto;
+      margin: 20px 75px 20px 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+      border: 2px solid #1269d6;
+      &:hover, &.btnClicked {
+        color: #fff !important;
+        // border-color: #1165bf !important;
+        background-color: #1269d6 !important;
+        box-shadow: 1px 0 0 0 #fff, 2px 0 0 0 #1269d6;
+      }
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &.portrait {
+    .#{$app-namespace}-container {
+      main {
+        .#{$app-namespace}-main-container {
+          .nav-bar-container {
+            .vl-tabs-component {
+              .tab-base {
+                .tab-panels {
+                  margin: 0;
+                  margin-left: 55px;
+                  width: calc(100% - 79px);
+                  height: calc(100% - 52px);
+                }
+              }
+            }
+          }
+        }
+      }
+      .#{$app-namespace}-globalbutton {
+        margin-right: 25px;
+      }
+    }
+  }
+}

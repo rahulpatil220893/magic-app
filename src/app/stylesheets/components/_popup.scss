@@ -1,0 +1,229 @@
+&.vl-responsive-wrapper {
+  &.medium,
+  &.small {
+    .vl-popups-container {
+      min-height: 970px;
+      min-width: 768px;
+    }
+  }
+}
+
+&.vl-popups-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 500;
+  overflow: hidden;
+
+  .vl-popups-overlay {
+    display: none;
+    position: fixed;
+    // position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    overflow: hidden;
+  }
+
+  .vl-popup-container {
+    width: 476px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // background: #fff;
+    min-height: 100px;
+    min-width: 200px;
+
+    font-size: 23px;
+    line-height: 28px;
+    font-family: AvenirHeavy;
+
+    > div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .vl-popup-close {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        padding: 0;
+        margin: 10px 10px 0 0;
+        height: 24px;
+        width: 24px;
+        cursor: pointer;
+        background: 0 0;
+        border: none;
+        font-size: 25px;
+        color: #4c4c4c;
+        z-index: 1;
+
+        &:hover {
+          color: #33251b;
+          box-shadow: none !important;
+        }
+        &:focus {
+          box-shadow: 0 0 0 2px white, 0 0 0 5px #1269d6;
+          outline: none;
+        }
+      }
+    }
+
+    &.vl-popup {
+      .popup-content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        word-wrap: break-word;
+        padding: 60px 48px 24px;
+        text-align: left;
+        color: #4c4c4c;
+        background-color: #d8d8d8;
+        border-radius: 6px;
+        flex-direction: column;
+
+        .popup-content-message {
+          margin: 0 0 24px;
+        }
+
+        &.hideButton {
+          padding: 60px 48px;
+
+          .popup-content-message {
+            margin: 0;
+          }
+        }
+
+        .popup-content-cta {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          button {
+            color: #1269d6;
+            &:hover {
+              background: #1269d6;
+              color: white;
+            }
+
+            &:not(:first-child) {
+              margin-left: 34px;
+            }
+          }
+        }
+      }
+    }
+
+    &.vl-popup-save {
+      .vl-save-popup-content {
+        // width: 481px;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+        // justify-content: center;
+        word-wrap: break-word;
+        padding: 60px 48px;
+        text-align: left;
+        color: #4c4c4c;
+        background-color: #d8d8d8;
+        border-radius: 6px;
+      }
+    }
+
+    &.vl-popup-save,
+    &.vl-popup-submit {
+      padding: 12px;
+      border-radius: 5px;
+      background-color: #d8d8d8;
+      > div {
+        .vl-popup-close {
+          top: 0;
+          right: 0;
+          margin: 0;
+          display: block;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+      .vl-popup-content-container {
+        display: flex;
+        text-align: left;
+        color: #4c4c4c;
+        align-items: center;
+        word-wrap: break-word;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 36px 12px;
+
+        p {
+          margin: 0;
+          width: 100%;
+          padding-left: 8px;
+        }
+
+        .vl-submit-popup-controls {
+          margin-top: 24px;
+          display: flex;
+          .vl-btn {
+            color: #1269d6;
+            border-width: 1.5px;
+            background-color: #ffffff;
+            margin-left: 34px;
+            &:not(:last-child) {
+              margin-left: 0;
+            }
+
+            &:hover {
+              background-color: #1269d6;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    &.vl-popup-save {
+      > div {
+        .vl-popup-content-container {
+          padding: 48px 36px;
+        }
+      }
+    }
+  }
+
+  &.vl-popup-show {
+    display: block;
+
+    .vl-popups-overlay {
+      display: block;
+    }
+
+    .vl-popup-container {
+      &.vl-popup-show {
+        display: block;
+      }
+    }
+  }
+
+  // .vl-draggable-container {
+  //   z-index: 502;
+  //   position: absolute;
+  //   height: 652px;
+  //   left: 0;
+  //   top: auto;
+  //   width: 750px;
+  //   bottom: 0px;
+  //   cursor: move;
+  // }
+}

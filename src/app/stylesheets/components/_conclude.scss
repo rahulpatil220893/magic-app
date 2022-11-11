@@ -1,0 +1,296 @@
+& {
+  .vl-conclude-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .vl-carousel-container {
+      .vl-carousel-inner-container {
+        .vl-carousel-slide-container {
+          .vl-dnd-conatainer {
+            .vl-canvas-container {
+              z-index: 0 !important;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+
+    .vl-dnd-conatainer {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      .text-space {
+        font-family: AvenirHeavy;
+        font-size: 21px;
+        color: #4c4c4c;
+        padding: 10px;
+
+        .vl-audio-container {
+          position: relative;
+          height: 50px;
+          width: auto;
+        }
+
+        p {
+          padding: 0;
+          margin: 0;
+          line-height: 30px;
+        }
+      }
+    }
+
+    .vl-conclude {
+      height: 100%;
+      width: 100%;
+
+      > div {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        // height: 100%;
+        position: relative;
+      }
+
+      .left {
+        width: 479px;
+        height: 500px;
+
+        .image-container {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          box-sizing: border-box;
+          position: relative;
+        }
+      }
+
+      .right {
+        background-color: white;
+        height: 100%;
+        overflow: auto;
+
+        .vl-audio-container {
+          height: 45px;
+        }
+
+        .text-container {
+          // display: flex;
+          @include flexbox;
+          @include flex-direction(column);
+          // flex-direction: column;
+          font-size: 23px;
+          color: #333;
+          font-family: AvenirLTPro;
+          overflow-y: auto;
+          height: calc(100% - 50px);
+          line-height: 28px;
+          padding: 0 7px 0 0;
+          color: #4c4c4c;
+
+          .text-area {
+            height: auto;
+          }
+
+          p {
+            margin: 0 0 10px;
+          }
+
+          h2 {
+            font-family: AvenirHeavy;
+            font-weight: 400;
+            margin: 0 0 10px;
+            font-size: 21px;
+          }
+        }
+
+        .notebook-textEditor-container {
+          @include flex-grow(1);
+          position: relative;
+        }
+
+        .vl-text-editor-container {
+          // flex-grow: 1;
+          height: 100%;
+          position: absolute;
+          width: 100%;
+
+          .vl-content-editable {
+            height: calc(100% - 35px);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            overflow: auto;
+            padding: 6px 10px;
+            line-height: 23px;
+            font-size: 21px;
+            background-color: #fff;
+            user-select: text;
+            -ms-user-select: text;
+            border-radius: 4px 4px 0 0;
+            width: 100%;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            -ms-word-wrap: break-word;
+          }
+        }
+
+        .vl-notebook-toolbar-editor {
+          border-bottom: 1px solid #ccc;
+          background-color: #ecf0f7;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 3px;
+          color: #4c4c4c;
+          width: 100%;
+
+          .tool-bar {
+            .active {
+              background-color: rgba(66, 106, 178, 0.35) !important;
+            }
+
+            .vl-list {
+              left: 0;
+
+              &:before {
+                left: 0;
+                top: 166px;
+                margin: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .vl-dnd-wrapper {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      position: relative;
+      overflow: auto;
+      overflow-x: hidden;
+
+      .vl-droppable-container {
+        height: 100%;
+
+        .vl-sticky-wrapper {
+          position: absolute;
+          padding: 20px 4px 20px 10px;
+          width: 194px;
+          height: auto;
+          right: 20px;
+          background: #f8f7b6;
+          cursor: move;
+          box-sizing: content-box;
+          max-height: 320px;
+          min-height: 20px;
+          user-select: text !important;
+          -ms-user-select: text !important;
+          -webkit-user-select: text !important;
+          z-index: 11;
+
+          .vl-stick-notes {
+            color: #666;
+            padding: 0;
+            width: 183px;
+            height: auto;
+            overflow-y: auto;
+            word-wrap: break-word;
+            box-sizing: content-box;
+            overflow: hidden;
+            border: none;
+            font: 400 16px/1 Arial, Helvetica, sans-serif;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            background: #f8f7b6;
+            cursor: text;
+            user-select: text !important;
+            -ms-user-select: text !important;
+            -webkit-user-select: text !important;
+            text-align: left;
+            min-height: 20px;
+
+            &:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .vl-bottom-panel {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 35px;
+      bottom: -35px;
+
+      .button-box {
+        height: 100%;
+
+        .imagine-buttons {
+          height: 35px;
+          width: 30px;
+          padding: 5px;
+          text-align: center;
+          margin-right: 5px;
+          background-color: #f7f7f7;
+          border: none;
+          font-size: 21px;
+          cursor: pointer;
+          color: #545352;
+          display: inline-flex;
+
+          :hover {
+            color: #000;
+          }
+
+          .notes {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+
+            span {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              -moz-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+              cursor: pointer;
+              color: #545352;
+            }
+          }
+
+          .imagine_but_text {
+            font-size: 0;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+&.portrait.medium {
+  .vl-conclude-container {
+    .vl-conclude {
+      flex-direction: column;
+
+      .vl-conclude-left {
+        > div {
+          margin: auto;
+        }
+      }
+
+      .vl-conclude-right {
+        height: 210px;
+        padding: 10px;
+      }
+    }
+  }
+}

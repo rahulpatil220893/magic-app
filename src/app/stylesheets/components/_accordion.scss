@@ -1,0 +1,60 @@
+.accordion-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  .accordion-item {
+    position: relative;
+    &.active .vl-audio-play-icon:hover {
+      // background-color: #ffffff;
+      // border-radius: 50%;
+      // box-shadow: 0 0 0 1px white, 0 0 0 2.5px transparent !important;
+    }
+    > .vl-audio-container {
+      position: absolute;
+      top: 2px;
+      left: 15px;
+      .tooltip {
+        width: max-content;
+      }
+      .vl-audio-play-icon,
+      .vl-audio-pause-icon,
+      .vl-audio-restart-icon {
+        background-color: #ffffff;
+        border-radius: 50%;
+        &:hover {
+          background-color: transparent;
+          border-radius: 50%;
+          border-color: transparent;
+          box-shadow: 0 0 0 1px #1269d6, 0 0 0 2.5px #1269d6 !important;
+        }
+      }
+    }
+    .accordion-button {
+      width: 100%;
+      justify-content: left;
+      padding-top: 50px;
+    }
+    .accordion-body {
+      position: relative;
+      width: 94%;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      display: none;
+      .vl-audio-container {
+        position: absolute;
+        top: -18px;
+        left: -2px;
+        .tooltip {
+          width: max-content;
+        }
+      }
+      .accordion-text {
+        padding-top: 30px;
+      }
+    }
+    .show-accordion-body {
+      display: block;
+    }
+  }
+}

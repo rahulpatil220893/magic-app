@@ -1,0 +1,225 @@
+$table-text-color: #352719 !default;
+$disabled-bg-color: #c7c7c7 !default;
+$disabled-text-color: #525252 !default;
+$disabled-border-color: #525252 !default;
+$disabled-slider-color: #4a4a4ae6 !default;
+
+body,
+html,
+main,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: #fff;
+}
+
+// html {
+//   overflow: hidden;
+// }
+
+body {
+  font-family: Avenir;
+  // -webkit-overflow-scrolling: touch;
+
+  &.no-outline {
+    * {
+      &:focus {
+        // border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      .vl .vl-tabs-component .tab-base .vl-tab-list li span {
+        box-shadow: none !important;
+      }
+    }
+
+    .vl-state-focused {
+      outline: none !important;
+      border: 0;
+    }
+  }
+
+  :focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 5px #1269d6;
+    outline: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -ms-user-select: none;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+
+  &.sr-image {
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 15px;
+  background: #fff;
+  border: 1px solid #333333;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 13px;
+  background: #8f8b8b;
+  border: 1px solid #333333;
+  border-bottom-width: 0px;
+  border-top-width: 0px;
+}
+
+::-webkit-scrollbar-button {
+  display: block;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  height: 11px;
+  width: 7px;
+  background-position: center 2px;
+  background-image: url(../../app/assets/images/arrow_up.svg);
+}
+
+/* Down */
+::-webkit-scrollbar-button:vertical:end:increment {
+  height: 11px;
+  width: 7px;
+  background-position: center 2px;
+  background-image: url(../../app/assets/images/arrow_down.svg);
+}
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+
+.vl-container {
+  .disabled-button {
+    pointer-events: none;
+    background-color: $disabled-bg-color !important;
+    color: $disabled-text-color !important;
+    border: 2px solid $disabled-border-color !important;
+  }
+}
+
+.vl-notebook-table-page {
+  .notebook-table {
+    tbody {
+      tr {
+        .content-editable,
+        td {
+          font-weight: 500;
+          color: $table-text-color;
+          font-family: AvenirLTPro;
+        }
+      }
+    }
+  }
+}
+
+.slider-container {
+  &.disabled {
+    color: $disabled-slider-color !important;
+  }
+}
+
+.word-wrap {
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  -ms-word-wrap: break-word !important;
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.sr-image {
+  clip: unset;
+  width: 100%;
+  height: 100%;
+}
+
+select {
+  &:not(:disabled) {
+    cursor: pointer;
+
+    option {
+      cursor: pointer;
+    }
+  }
+}
+
+math-field {
+  // font-family: AvenirBook !important;
+  // font-size: inherit;
+
+  // .ML__mathit,
+  // span {
+  //   font-family: inherit !important;
+  // }
+
+  &:focus-within {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+
+.ui-draggable-dragging {
+  outline: none !important;
+}
+
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+@import "./font-awesome.scss";
+@import "./fonts.scss";
+@import "./print.scss";
+@import "./mathquill.scss";

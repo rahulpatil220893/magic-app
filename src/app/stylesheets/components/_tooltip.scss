@@ -1,0 +1,91 @@
+.tooltip {
+  display: inline-block;
+  max-width: 130px;
+  background-color: #fff;
+  border: 1px solid #0a6aa6;
+  color: #000;
+  text-align: left;
+  padding: 4px 6px;
+  position: absolute;
+  display: none;
+  transition: opacity 0.3s;
+  font-family: "AvenirMedium";
+  font-size: 14px;
+  line-height: 18px;
+  z-index: 2;
+  letter-spacing: 0.3px;
+  font-weight: 100;
+  
+  &.Close {
+    top: 34px;
+    right: -9px;
+  }
+  &.labNotebookButton {
+    top: 37px;
+
+    &.right {
+      left: 65px;
+    }
+  }
+  &.show {
+    display: block;
+  }
+
+  &.top {
+    bottom: 40px;
+
+    &#Symbol-tooltip {
+      bottom: 50px;
+    }
+
+    // &::after {
+    //   bottom: -10px;
+    //   border-color: #0a6aa6 transparent transparent transparent;
+    // }
+  }
+
+  &.bottom {
+    top: 45px;
+
+    &#audio-replay-tooltip {
+      left: 60px;
+    }
+
+    // &::after {
+    //   top: -10px;
+    //   border-color: transparent transparent #0a6aa6 transparent;
+    // }
+  }
+
+  &.right {
+    left: 45px;
+
+    // &::after {
+    //   left: -5px;
+    //   top: 10px;
+    //   border-color: transparent #0a6aa6 transparent transparent;
+    // }
+  }
+
+  &.left {
+    right: 45px;
+
+    // &::after {
+    //   left: 136px;
+    //   top: 10px;
+    //   border-color: transparent transparent transparent #0a6aa6;
+    // }
+  }
+}
+
+.tooltip::after {
+  // content: "";
+  position: absolute;
+  // left: 50%;
+  // z-index: 1;
+  // margin-left: -5px;
+  // border-width: 5px;
+  // margin-top: -1px;
+  // border-style: solid;
+  // display: none;
+}

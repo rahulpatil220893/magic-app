@@ -1,0 +1,30 @@
+&.large {
+  .#{$app-namespace}-container {
+    // main {
+    //  height: max-content;
+    // }
+    .tab-base {
+      // .tab-panels {
+      //   height: 375px !important;
+      // }
+
+      ul {
+        li {
+          a {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+&.ipad_class {
+  &.large {
+    .#{$app-namespace}-container {
+      main {
+        height: calc(100% - 195px);
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.vl-state-focused {
+  outline: #00f solid 1px;
+}
+
+.vl-list {
+  list-style: none;
+
+  .vl-item {
+    a {
+      text-decoration: none;
+      color: #58595b;
+
+      &:focus {
+        box-shadow: 0 0 0 1px white, 0 0 0 4px #1269d6;
+        outline: none !important;
+      }
+    }
+
+    // &.degree {
+    //   a {
+    //     font-family: Aller Light Italic;
+    //   }
+    // }
+
+    &.sqrt-symbol,
+    &.frac-symbol {
+      a {
+        background: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &.sqrt-symbol {
+      a {
+        width: 24px !important;
+        height: 14px !important;
+        background-image: url(../../app/assets/images/squareroot_icon.svg);
+      }
+    }
+
+    &.frac-symbol {
+      line-height: 0.6 !important;
+      a {
+        width: 15px !important;
+        height: 24px !important;
+        background-image: url(../../app/assets/images/fraction_icon.svg);
+      }
+    }
+  }
+}

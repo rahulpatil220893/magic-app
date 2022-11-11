@@ -1,0 +1,93 @@
+.vl-audio-play-icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-left: 2px;
+    width: 36px;
+    padding: 0;
+    height: 36px;
+    background-image: url(../../app/assets/images/play_icon.png);
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-image: url(../../app/assets/images/play_icon_hover.png);
+        }
+    }
+
+   
+
+    &:focus {
+        box-shadow: 0 0 0 1px white, 0 0 0 4px #1269d6;
+        outline: none !important;
+    }
+}
+
+.vl-audio-pause-icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-left: 2px;
+    width: 36px;
+    padding: 0;
+    height: 36px;
+    background-image: url(../../app/assets/images/pause_icon.png);
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-image: url(../../app/assets/images/pause_icon_hover.png);
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px white, 0 0 0 4px #1269d6;
+        outline: none !important;
+    }
+}
+
+.vl-audio-restart-icon {
+    position: relative;
+    left: 58px;
+    top: -43px;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-left: 2px;
+    width: 36px;
+    padding: 0;
+    height: 36px;
+    background-image: url(../../app/assets/images/restart_icon.png);
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: block;
+    cursor: pointer;
+
+    
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background-image: url(../../app/assets/images/restart_icon_hover.png);
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px white, 0 0 0 4px #1269d6;
+        outline: none !important;
+    }
+}

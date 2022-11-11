@@ -1,0 +1,107 @@
+.video-container {
+  position: relative;
+  height: 300px;
+  width: 400px;
+  z-index: 1;
+
+  video {
+    height: inherit;
+    width: inherit;
+  }
+
+  .play-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 11px 0 0 20px;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+    top: 0;
+    // bottom: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    // margin: 0;
+    &.play {
+      // width: 112px;
+      // height: 112px;
+      // background-color: rgba(0, 0, 0, .2);
+      height: 60px;
+      width: 60px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      background-image: url(../../app/assets/images/play_button.png);
+      background-size: contain;
+
+      // .videoicon-play {
+      //   font-family: videoplayer;
+      //   speak: none;
+      //   font-style: normal;
+      //   font-weight: 400;
+      //   font-variant: normal;
+      //   text-transform: none;
+      //   line-height: 1;
+      //   -webkit-font-smoothing: antialiased;
+      //   -moz-osx-font-smoothing: grayscale;
+
+      //   &.play-center {
+      //     //   font-size: 60px;
+      //     //   margin-left: 10px;
+      //     font-size: 34px;
+      //     height: 36px;
+      //     width: 28px;
+      //   }
+
+      //   &::before {
+      //     content: "\e909";
+      //     color: #ffffff;
+      //   }
+      // }
+    }
+    &.pause {
+      // width: 112px;
+      // height: 112px;
+      // background-color: rgba(0, 0, 0, .2);
+      height: 60px;
+      width: 60px;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+      background-image: url(../../app/assets/images/pause_button.png);
+      background-size: contain;
+
+      // .videoicon-play {
+      //   font-family: videoplayer;
+      //   speak: none;
+      //   font-style: normal;
+      //   font-weight: 400;
+      //   font-variant: normal;
+      //   text-transform: none;
+      //   line-height: 1;
+      //   -webkit-font-smoothing: antialiased;
+      //   -moz-osx-font-smoothing: grayscale;
+
+      //   // &.play-center {
+      //   //   //   font-size: 60px;
+      //   //   //   margin-left: 10px;
+      //   //   // background-image: url(../../app/assets/images/pause_button.png);
+      //   //   font-size: 34px;
+      //   //   height: 36px;
+      //   //   width: 28px;
+      //   //   background-size: contain;
+      //   // }
+
+      //   // &::before {
+      //   //   content: "";
+      //   //   background-image: url(../../app/assets/images/pause_button.png);
+      //   //   height: 34px;
+      //   //   width: 34px;
+      //   //   color: #ffffff;
+      //   // }
+      // }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="22px" viewBox="0 0 36 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="13.825982" y="3.10531661" width="16" height="16"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="SAVAAS-global-component" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-73.000000, -227.000000)" stroke="#000000">
+            <g id="squareroot_icon" transform="translate(74.174018, 227.894683)">
+                <use id="Rectangle-Copy" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="1" xlink:href="#path-1"></use>
+                <polyline id="Path-3" points="34.7696731 0 11.8124801 0 6.41713361 19.1053166 3.11392917 11.1053166 4.82526145e-16 12.6357064"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

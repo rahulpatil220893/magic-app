@@ -1,0 +1,9 @@
+&.medium {
+  .#{$app-namespace}-container {
+    .tab-base {
+      .tab-panels {
+        height: 100% ;
+      }
+    }
+  }
+}

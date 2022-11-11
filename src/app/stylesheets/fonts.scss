@@ -1,0 +1,931 @@
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Light.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Light.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Light.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Light.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Light.svg#AvenirLTStd-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-LightOblique.svg#AvenirLTStd-LightOblique")
+      format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirLightW0135";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0135Light.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0135Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0135Light.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0135Light.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0135Light.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0135Light.svg#AvenirLTW0135Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirLightW0135";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-35LightObli.svg#AvenirLTW01-35LightObli")
+      format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Book.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Book.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Book.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Book.ttf") format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Book.svg#AvenirLTStd-Book")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BookOblique.svg#AvenirLTStd-BookOblique")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBookLTW0145";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0145Book.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0145Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0145Book.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0145Book.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0145Book.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0145Book.svg#AvenirLTW0145Book")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBookLTW0145";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-45BookObliq.svg#AvenirLTW01-45BookObliq")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirRoman";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Roman.svg#AvenirLTStd-Roman")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirRoman";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Oblique.svg#AvenirLTStd-Oblique")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirRomanLTW0155";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0155Roman.svg#AvenirLTW0155Roman")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirRomanLTW0155";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-55Oblique.svg#AvenirLTW01-55Oblique")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirMedium";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Medium.svg#AvenirLTStd-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirMedium";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-MediumOblique.svg#AvenirLTStd-MediumOblique")
+      format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirMediumLTW0165";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0165Medium.svg#AvenirLTW0165Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirMediumLTW0165";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-65MediumObl.svg#AvenirLTW01-65MediumObl")
+      format("svg");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Black.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Black.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Black.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Black.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Black.svg#AvenirLTStd-Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBlack";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-BlackOblique.svg#AvenirLTStd-BlackOblique")
+      format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBlackLTW0195";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0195Black.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0195Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0195Black.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0195Black.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0195Black.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0195Black.svg#AvenirLTW0195Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirBlackLTW0195";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-95BlackObli.svg#AvenirLTW01-95BlackObli")
+      format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirHeavy";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.woff2") format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-Heavy.svg#AvenirLTStd-Heavy")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirHeavy";
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTStd-HeavyOblique.svg#AvenirLTStd-HeavyOblique")
+      format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirHeavyLTW0185";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.woff") format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW0185Heavy.svg#AvenirLTW0185Heavy")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvenirHeavyLTW0185";
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.eot");
+  src: url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.woff2")
+      format("woff2"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.woff")
+      format("woff"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/avenir/AvenirLTW01-85HeavyObli.svg#AvenirLTW01-85HeavyObli")
+      format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "pevl-fonts";
+  src: url("../../app/assets/fonts/pevl/pevl-fonts.eot?es7t39");
+  src: url("../../app/assets/fonts/pevl/pevl-fonts.eot?es7t39#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/pevl/pevl-fonts.ttf?es7t39") format("truetype"),
+    url("../../app/assets/fonts/pevl/pevl-fonts.woff?es7t39") format("woff"),
+    url("../../app/assets/fonts/pevl/pevl-fonts.svg?es7t39#pevl-fonts")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Woodland-Medium";
+  src: url("../../app/assets/fonts/woodland/ITCWoodlandW01-Medium.eot?#iefix");
+  src: url("../../app/assets/fonts/woodland/WoodlandITCStd-Medium.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Medium.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Medium.woff")
+      format("woff"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Medium.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Medium.svg#ITCWoodlandW01-Medium")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Woodland-Demi";
+  src: url("../../app/assets/fonts/woodland/ITCWoodlandW01-Demi.eot?#iefix");
+  src: url("../../app/assets/fonts/woodland/WoodlandITCStd-DemiBold.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Demi.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Demi.woff")
+      format("woff"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Demi.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Demi.svg#ITCWoodlandW01-Demi")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Woodland-Reg";
+  src: url("../../app/assets/fonts/woodland/ITCWoodlandW01-Light.eot?#iefix");
+  src: url("../../app/assets/fonts/woodland/WoodlandITCStd-Light.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Light.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Light.woff")
+      format("woff"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Light.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/woodland/ITCWoodlandW01-Light.svg#ITCWoodlandW01-Light")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heinemann-Reg";
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool.eot?#iefix");
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool.woff") format("woff"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool.svg#HeinemannSchool")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heinemann-Bold";
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.eot?#iefix");
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.woff")
+      format("woff"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Bold.svg#HeinemannSchool-Bold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Heinemann-Italic";
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.eot?#iefix");
+  src: url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.otf")
+      format("opentype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.eot?#iefix")
+      format("eot"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.woff")
+      format("woff"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.ttf")
+      format("truetype"),
+    url("../../app/assets/fonts/heineman/HeinemannSchool-Italic.svg#HeinemannSchool-Italic")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fontello";
+  src: url("../../app/assets/fonts/fontello/fontello.eot?97844465");
+  src: url("../../app/assets/fonts/fontello/fontello.eot?97844465#iefix")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/fontello/fontello.woff?97844465") format("woff"),
+    url("../../app/assets/fonts/fontello/fontello.ttf?97844465")
+      format("truetype"),
+    url("../../app/assets/fonts/fontello/fontello.svg?97844465#fontello")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../../app/assets/fonts/icomoon/icomoon.eot");
+  src: url("../../app/assets/fonts/icomoon/icomoon.eot")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/icomoon/icomoon.woff") format("woff"),
+    url("../../app/assets/fonts/icomoon/icomoon.ttf") format("truetype"),
+    url("../../app/assets/fonts/icomoon/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "videoplayer";
+  src: url("../../app/assets/fonts/videoplayer/videoplayer.eot");
+  src: url("../../app/assets/fonts/videoplayer/videoplayer.eot")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/videoplayer/videoplayer.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RussellSquareRoman";
+  src: url("../../app/assets/fonts/digital/RussellSquareW01-Roman.eot");
+  src: url("../../app/assets/fonts/digital/RussellSquareW01-Roman.eot")
+      format("embedded-opentype"),
+    url("../../app/assets/fonts/digital/RussellSquareW01-Roman.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "pevl-fonts";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-G3_note:before {
+  content: "\e923";
+}
+
+.icon-arrow-1:before {
+  content: "\e913";
+}
+
+.icon-arrow-2:before {
+  content: "\e914";
+}
+
+.icon-arrow-3:before {
+  content: "\e915";
+}
+
+.icon-arrow-4:before {
+  content: "\e916";
+}
+
+.icon-arrow-5:before {
+  content: "\e917";
+}
+
+.icon-arrow-6:before {
+  content: "\e918";
+}
+
+.icon-close-1:before {
+  content: "\e919";
+}
+
+.icon-delete:before {
+  content: "\e91a";
+}
+
+.icon-mark1:before {
+  content: "\e91b";
+}
+
+.icon-mark2:before {
+  content: "\e91c";
+}
+
+.icon-mark3:before {
+  content: "\e91d";
+}
+
+.icon-mark4:before {
+  content: "\e91e";
+}
+
+.icon-mark5:before {
+  content: "\e916 ";
+}
+
+.icon-mark6:before {
+  content: "\e913";
+}
+
+.icon-mark7:before {
+  content: "\e915";
+}
+
+.icon-mark8:before {
+  content: "\e914";
+}
+
+.icon-new-page:before {
+  content: "\e91f";
+}
+
+.icon-print-2:before {
+  content: "\e920";
+}
+
+.icon-reset:before {
+  content: "\e921";
+}
+
+.icon-sticky-note:before {
+  content: "\e922";
+}
+
+.icon-closenote:before {
+  content: "\e900";
+  position: absolute;
+  top: 0;
+  // left: 0;
+}
+
+.icon-next:before {
+  content: "\e901";
+}
+
+.icon-back:before {
+  content: "\e902";
+}
+
+.icon-discard:before {
+  content: "\e903";
+}
+
+.icon-print:before {
+  content: "\e904";
+}
+
+.icon-add:before {
+  content: "\e905";
+}
+
+.icon-minus:before {
+  content: "\e906";
+}
+
+.icon-plus:before {
+  content: "\e907";
+}
+
+.icon-bulleted:before {
+  content: "\e908";
+}
+
+.icon-underline:before {
+  content: "\e909";
+}
+
+.icon-italic:before {
+  content: "\e90a";
+}
+
+.icon-bold:before {
+  content: "\e90b";
+}
+
+.icon-size:before {
+  content: "\e90c";
+}
+
+.icon-icon-note:before {
+  content: "\e90d";
+}
+
+.icon-snapshot:before {
+  content: "\e90e";
+}
+
+.icon-clear:before {
+  content: "\e90f";
+}
+
+.icon-eraser:before {
+  content: "\e910";
+}
+
+.icon-pencil:before {
+  content: "\e911";
+}
+
+.icon-drawtool:before {
+  content: "\e912";
+}
+
+.icon-new-icon:before {
+  content: "\e91f";
+}
+
+.icon-delete-icon:before {
+  content: "\e91a";
+}
+
+.icon-print-icon:before {
+  content: "\e920";
+}
+
+/* NEW ICONS */
+
+[class^="icomoon-"],
+[class*=" icomoon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-audio_2 .path1:before {
+  content: "\e901";
+  color: rgb(19, 116, 219);
+}
+
+.icomoon-audio_2 .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icomoon-pause_1:before {
+  content: "\e903";
+  color: #1269d6;
+}
+
+.icomoon-pause_2 .path1:before {
+  content: "\e904";
+  color: rgb(19, 116, 219);
+}
+
+.icomoon-pause_2 .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(252, 252, 252);
+}
+
+.icomoon-replay_1:before {
+  content: "\e906";
+  color: #1269d6;
+}
+
+.icomoon-replay_2 .path1:before {
+  content: "\e907";
+  color: rgb(19, 116, 219);
+}
+
+.icomoon-replay_2 .path2:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icomoon-audio_11:before {
+  content: "\e92e";
+}
+
+.icomoon-addnote:before {
+  content: "\e900";
+}
+
+.icomoon-bold:before {
+  content: "\e908";
+}
+
+.icomoon-bullets:before {
+  content: "\e909";
+}
+
+.icomoon-Camera_1:before {
+  content: "\e90a";
+  color: #fff;
+}
+
+.icomoon-Camera_2:before {
+  content: "\e90b";
+}
+
+.icomoon-ClearAll_1:before {
+  content: "\e90c";
+  color: #fff;
+}
+
+.icomoon-ClearAll_2:before {
+  content: "\e90d";
+}
+
+.icomoon-delete:before {
+  content: "\e90e";
+}
+
+.icomoon-divder_line:before {
+  content: "\e90f";
+}
+
+.icomoon-Eraser_1:before {
+  content: "\e910";
+  color: #fff;
+}
+
+.icomoon-Eraser_2:before {
+  content: "\e911";
+}
+
+.icomoon-Info_1:before {
+  content: "\e912";
+}
+
+.icomoon-italics:before {
+  content: "\e913";
+}
+
+.icomoon-Pencil_1:before {
+  content: "\e91b";
+  color: #fff;
+}
+
+.icomoon-Pencil_2:before {
+  content: "\e91c";
+}
+
+.icomoon-Pencil-Minus_1:before {
+  content: "\e91d";
+  color: #7b7b7b;
+}
+
+.icomoon-Pencil-Plus_1:before {
+  content: "\e91e";
+  color: #7b7b7b;
+}
+
+.icomoon-print:before {
+  content: "\e91f";
+}
+
+.icomoon-refresh .path1:before {
+  content: "\e920";
+  color: rgb(19, 116, 219);
+}
+
+.icomoon-refresh .path2:before {
+  content: "\e921";
+  margin-left: -1em;
+}
+
+.icomoon-Save_1:before {
+  content: "\e929";
+}
+
+.icomoon-Select_1:before {
+  content: "\e92a";
+  color: #fff;
+}
+
+.icomoon-Select_2:before {
+  content: "\e92b";
+}
+
+.icomoon-text_size:before {
+  content: "\e92c";
+}
+
+.icomoon-underline:before {
+  content: "\e92d";
+}

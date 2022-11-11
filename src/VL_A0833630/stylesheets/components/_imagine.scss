@@ -1,0 +1,461 @@
+& {
+  .vl-imagine-container {
+    .vl-canvas-container {
+      height: 99%;
+    }
+    .vl-imagine-footer {
+      background-color: #f7f7f7;
+      width: 100%;
+      height: 35px;
+      position: absolute;
+      bottom: 0px;
+      text-align: center;
+    }
+
+    .vl-indroduce-footer {
+      background-color: #f7f7f7;
+      width: 100%;
+      height: 35px;
+      position: absolute;
+      bottom: 0px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .imagine-footer {
+        width: 100%;
+        position: relative;
+        padding: 0px 20px;
+
+        .imagine-action-btn {
+          width: 100%;
+          height: 100%;
+          display: flex;
+
+          .ico-but {
+            position: relative;
+            float: left;
+            text-align: center;
+            padding: 0px 10px;
+            cursor: pointer;
+            border: 1.5px solid #426ab2;
+            color: #426ab2;
+            margin-right: 7px;
+            border-radius: 6px;
+            height: max-content;
+            background-color: #fff;
+
+            &:disabled {
+              cursor: default;
+              opacity: 0.4;
+            }
+
+            &:hover {
+              background-color: #1269d6;
+              color: #fff;
+              box-shadow: 0 0 0 1px #fff, 0 0 0 2px #1269d6;
+
+              .icon-add,
+              .icon-print {
+                filter: brightness(0) invert(1);
+              }
+
+              &:disabled {
+                background-color: #fff;
+                color: #426ab2;
+                box-shadow: none;
+
+                .icon-add,
+                .icon-print {
+                  filter: none;
+                }
+              }
+            }
+
+            .icon-add {
+              background-image: url(../../app/assets/images/addStickyNote.svg);
+              height: 20px;
+              width: 19px;
+              background-size: cover;
+
+              &::before {
+                content: "";
+              }
+            }
+
+            .icon-print {
+              background-image: url(../../app/assets/images/printLastPage.svg);
+              height: 19px;
+              width: 20px;
+              background-size: cover;
+
+              &::before {
+                content: "";
+              }
+            }
+
+            .fa-rotate-right {
+              background-image: url(../../app/assets/images/resetStickyNote.svg);
+              height: 20px;
+              width: 20px;
+              background-size: cover;
+
+              &::before {
+                content: "";
+              }
+            }
+
+            &.resetButtonCont {
+              background-color: #d8d8d8;
+              color: #333333;
+
+              &:disabled {
+                background-color: #d8d8d8;
+                color: #333333;
+                box-shadow: none;
+
+                .icon-add,
+                .icon-print {
+                  filter: none;
+                }
+              }
+            }
+          }
+
+          .btn_text {
+            float: right;
+            padding: 0 7px 0 0;
+            position: relative;
+            margin-left: 7px;
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: 0.36px;
+          }
+        }
+      }
+    }
+  }
+
+  .vl-scalable-wrapper-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .vl-imagine-container {
+    //padding: 10px;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .vl-imagine {
+      padding: 20px 20px 0px;
+      width: 100%;
+      height: calc(100% - 35px);
+    }
+
+    .vl-audio-container {
+      height: 40px;
+      padding-left: 2px;
+
+      .tooltip.bottom {
+        top: 70px !important;
+      }
+    }
+
+    .text-area {
+      p {
+        margin-bottom: 0px;
+        margin-top: 10px;
+
+        font-size: 23px;
+        color: #4c4c4c;
+        line-height: 28px;
+        padding: 0 7px 0 0;
+
+        @media (max-height: 500px) {
+          height: calc(100% - 50px);
+        }
+      }
+    }
+
+    .text-container {
+      width: 100%;
+      height: calc(100% - 26px);
+      padding: 2px 10px 1px 10px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+
+      @media (min-width: 2310px) {
+        height: calc(100% - 0px);
+      }
+
+      @media (max-height: 650px) {
+        width: 100%;
+        // height: 84%;
+        overflow: auto;
+
+        .notebook-drawing-container {
+          width: 99%;
+          margin-left: 7px;
+          margin-top: 4px;
+          margin-bottom: 5px;
+          // padding: 10px;
+          position: relative;
+          border: 2px solid #dadada !important;
+          // height: 292px !important;
+        }
+
+        .text-area {
+          height: auto;
+        }
+      }
+
+      .vl-list {
+        left: -5px;
+
+        &:before {
+          right: 25px;
+        }
+      }
+    }
+
+    .notebook-drawing-container {
+      width: 98%;
+      margin-left: 7px;
+      margin-top: 4px;
+      // padding: 10px;
+      min-height: 346px;
+      position: relative;
+      border: 2px solid #dadada !important;
+      height: calc(100% - 191px);
+
+      // @media (min-width: 1440px) {
+      //   height: calc(100% - 191px);
+      // }
+
+      @media (max-height: 860px) {
+        height: 472px !important;
+      }
+
+      // @media (min-width:1440px){
+      //   height: calc(100% - 191px);
+      // }
+      @media (max-width: 1412px) {
+        height: 500px !important;
+      }
+
+      @media (max-width: 761px) {
+        height: calc(100% - 320px) !important;
+      }
+
+      // @media (min-width:1139px){
+      //   height: calc(100%-246px) !important;
+      // }
+      .imagine-drop-area {
+        position: absolute;
+        float: left;
+        width: calc(100% - 2px);
+        height: 100%;
+        border-radius: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .imagine-sticky-notes-holder {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+      }
+
+      .tab1 {
+        display: block !important;
+        // border: 1px solid #DADADA !important;
+      }
+    }
+  }
+}
+
+&.portrait.medium {
+  // .tab-panels {
+  //   margin: 0;
+  //   margin-left: 55px;
+  //   width: calc(100% - 79px);
+  //   height: calc(100% - 90px) !important;
+  // }
+
+  .vl-imagine {
+    .notebook-drawing-container {
+      margin-top: 11px;
+      min-height: 279px;
+      height: calc(100% - 270px) !important;
+
+      @media (max-width: 761px) {
+        height: calc(100% - 350px);
+      }
+
+      .vl-canvas-container {
+        width: 98% !important;
+      }
+    }
+
+    .vl-scalable-wrapper-container {
+      .vl-scalable-wrapper-right {
+        display: none;
+      }
+
+      .vl-scalable-wrapper-left {
+        display: none;
+      }
+    }
+  }
+}
+
+&.portrait.small {
+  .vl-imagine-container {
+    height: 1000px;
+  }
+
+  .vl-imagine {
+    .notebook-drawing-container {
+      min-height: 380px;
+      height: calc(100% - 860px);
+      overflow: hidden;
+    }
+
+    .vl-scalable-wrapper-container {
+      .vl-scalable-wrapper-right {
+        display: none;
+      }
+
+      .vl-scalable-wrapper-left {
+        display: none;
+      }
+    }
+  }
+
+  .tool-bar {
+    .icon-fonts.icon-print::before {
+      left: -148%;
+      top: 131%;
+    }
+
+    .icon-fonts.icon-print::after {
+      left: -148%;
+      top: 131%;
+    }
+  }
+}
+
+&.portrait.large {
+  .vl-imagine {
+    .notebook-drawing-container {
+      min-height: 380px;
+      margin-top: 11px;
+      height: calc(100% - 270px) !important;
+
+      .vl-canvas-container {
+        width: 98% !important;
+      }
+    }
+
+    .vl-scalable-wrapper-container {
+      .vl-scalable-wrapper-right {
+        display: none;
+      }
+
+      .vl-scalable-wrapper-left {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdown--item {
+  span {
+    height: 100%;
+    display: block;
+    background-color: red;
+  }
+}
+
+&.landscape.small {
+  .vl-imagine-container {
+    height: 800px;
+    overflow: hidden;
+
+    .text-container {
+      width: 100%;
+      // height: 94%;
+      height: calc(100% - 40px);
+      padding: 2px 10px 1px 10px;
+      overflow: hidden;
+      // overflow: auto;
+    }
+  }
+
+  .vl-imagine {
+    .notebook-drawing-container {
+      min-height: 190px;
+      height: calc(100% - 346px) !important;
+      overflow: hidden;
+    }
+
+    .vl-scalable-wrapper-container {
+      .vl-scalable-wrapper-right {
+        display: none;
+      }
+
+      .vl-scalable-wrapper-left {
+        display: none;
+      }
+    }
+  }
+}
+
+&.landscape.medium {
+  .vl-imagine-container {
+    height: 800px;
+    overflow: hidden;
+
+    .text-container {
+      width: 100%;
+      height: calc(100% - 40px);
+      padding: 2px 10px 1px 10px;
+      overflow: hidden;
+      // overflow: auto;
+    }
+  }
+
+  .vl-imagine {
+    .notebook-drawing-container {
+      min-height: 273px;
+      height: calc(100% - 346px) !important;
+      overflow: hidden;
+    }
+
+    .vl-scalable-wrapper-container {
+      .vl-scalable-wrapper-right {
+        display: none;
+      }
+
+      .vl-scalable-wrapper-left {
+        display: none;
+      }
+    }
+  }
+
+  .notebook-drawing-container {
+    overflow: hidden;
+  }
+}

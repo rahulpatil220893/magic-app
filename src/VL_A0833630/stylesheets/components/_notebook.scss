@@ -1,0 +1,105 @@
+& {
+  .vl-notebook-slide-content {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    p {
+      // font-family: AvenirLTPro;
+      font-size: 18px;
+      font-weight: 500;
+      color: #33271b;
+      margin: 0 0 8px 0;
+    }
+
+    h3 {
+      text-align: center;
+      // font-family: AvenirLTPro;
+      margin: 10px 0;
+      font-size: 18px;
+      color: #33271b;
+      font-weight: 900;
+    }
+  }
+  // .vl-notebook-container .vl-notebook-carousel-container .vl-notebook-carousel-slides .vl-notebook-carousel-slide .vl-notebook-carousel-slide-container .vl-notebook-slide-content .vl-notebook-text-page {
+  //   width: 100%;
+  //   height: 100% !important;
+  // }
+
+  .vl-notebook-carousel-container
+    .vl-notebook-carousel-slides
+    .vl-notebook-carousel-slide
+    .vl-notebook-carousel-slide-container
+    .vl-notebook-slide-content
+    .vl-notebook-image-page
+    .vl-text-editor-container {
+    width: 100%;
+    height: calc(100vh - 250px) !important;
+    align-items: flex-start;
+  }
+
+  .vl-notebook-container
+    .vl-notebook-carousel-container
+    .vl-notebook-toolbar
+    .vl-notebook-toolbar-action {
+    width: 150px;
+    display: inline-block;
+  }
+
+  .tooltip.right {
+    left: 45px !important;
+  }
+
+  // .vl-notebook-slide-content-page {
+  //   // height: max-content !important;
+  // }
+  .scenario-1 {
+    .vl-text-editor-container {
+      height: 30% !important;
+    }
+  }
+  .explore-1,
+  .explore-2 {
+    .vl-text-editor-container {
+      height: 84% !important;
+    }
+  }
+
+  .explore-3 {
+    table {
+    }
+  }
+  .conclude {
+    .vl-text-editor-container {
+      height: 99% !important;
+    }
+  }
+
+  .vl .table-container {
+    table {
+      width: 100%;
+      caption {
+        height: 0px;
+        opacity: 0;
+      }
+      tr {
+        td {
+          .content-editable {
+            border: 1px solid #1269d6;
+            box-sizing: border-box;
+            display: inline-block;
+            -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+.vl
+  .vl-notebook-container
+  .vl-notebook-carousel-container
+  .vl-notebook-carousel-slides
+  .vl-notebook-carousel-slide
+  .vl-notebook-carousel-slide-container.screenshot
+  .vl-text-editor-container {
+  height: 140px !important;
+}

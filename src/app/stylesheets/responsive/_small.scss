@@ -1,0 +1,50 @@
+&.small {
+  .#{$app-namespace}-header {
+    .header-button-holder {
+      button.notebook {
+        padding: 8px 8px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .#{$app-namespace}-container {
+    main {
+      .#{$app-namespace}-main-container {
+        .nav-bar-container {
+          .vl-tabs-component {
+            .tab-base {
+              .vl-tab-list {
+                padding: 0 26px 0 75px;
+                li a {
+                  min-width: 150px;
+                }
+              }
+              .tab-panels {
+                width: calc(100% - 100px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vl-popups-container {
+    .vl-popup-container {
+      width: 315px;
+      &.vl-popup-notebook-alert, &.vl-popup-notebook-confirm, 
+      &.vl-popup-save, &.vl-popup-lab-progress, &.vl-popup-submit {
+        width: 280px;
+      }
+
+      &.vl-popup-notebook {
+        width: 750px;
+        top: 0 !important;
+      }
+
+      &.vl-popup-help {
+        width: 100%;
+      }
+    }
+  }
+}

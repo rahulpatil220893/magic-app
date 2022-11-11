@@ -1,0 +1,54 @@
+.vl-scalable-wrapper-container {
+  width: 100%;
+  height: 100%;
+
+  .vl-scalable-wrapper-left {
+    width: 530px;
+    height: 556px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    // border: 1px solid #dadada;
+
+    .vl-scalable-container {
+      width: 530px;
+      height: 556px;
+      // border: 1px solid #dadada;
+      // left: 0;
+      // right: 0;
+      // margin: auto;
+    }
+  }
+
+  .vl-scalable-wrapper-right {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 10px 10px 10px 0;
+    overflow: auto;
+  }
+}
+
+.fullHotspotPopup {
+  .vl-scalable-wrapper-container {
+    box-shadow: 0 0 4px 0 rgb(0 0 0 / 25%);
+  }
+}
+
+&.portrait,
+&.landscape.medium {
+  .vl-scalable-wrapper-left {
+    left: 50%;
+    transform: translateX(-50%);
+    // right: 0;
+    // margin: auto;
+    position: relative;
+  }
+
+  .vl-scalable-wrapper-right {
+    padding: 0 10px 10px;
+  }
+}

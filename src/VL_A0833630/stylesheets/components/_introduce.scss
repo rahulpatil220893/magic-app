@@ -1,0 +1,1186 @@
+& {
+  .vl-introduce-container {
+    @import "inputRange";
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .vl-canvas-container {
+      height: calc(100% - 35px) !important;
+    }
+
+    .vl-introduce {
+      height: calc(100% - 35px);
+      //width: 100%;
+      padding: 10px;
+
+      > div {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        box-sizing: border-box;
+        height: 100%;
+        position: relative;
+        padding: 10px;
+        //border: 1px solid #dadada;
+      }
+
+      .image-section {
+        .hotspot1 {
+          background-image: url(../assets/images/hotspot1.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+          border-top: 10px solid #fff;
+          border-bottom: 10px solid #fff;
+          border-left: 5px solid #fff;
+          border-right: 5px solid #fff;
+          border-radius: 4.85px;
+
+          .wave-counter {
+            width: 66px;
+            height: 45px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 18px;
+            position: absolute;
+            top: 52px;
+            left: 8px;
+            padding: 2px;
+            border: 1px solid #dadada;
+            background-color: #fff;
+          }
+
+          .timer-one {
+            width: 66px;
+            height: 25px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 18px;
+            position: absolute;
+            top: 73px;
+            left: 89px;
+            padding: 2px;
+            border: 1px solid #dadada;
+            background-color: #fff;
+          }
+
+          .timer-two {
+            width: 66px;
+            height: 25px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 18px;
+            position: absolute;
+            top: 73px;
+            left: 254px;
+            padding: 2px;
+            border: 1px solid #dadada;
+            background-color: #fff;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+            color: #4c4c4c;
+          }
+        }
+      }
+
+      .vl-introduce-left {
+        width: 700px;
+        height: 470px;
+
+        .image-container {
+          background-image: url(../assets/images/scenario/Scenario.png);
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          box-sizing: border-box;
+          position: relative;
+
+          .side-hotspot {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 21px;
+            color: #d9d9d9;
+            border: 2px solid #d9d9d9;
+            padding: 5px;
+            // font-family: AvenirLTPro;
+            cursor: pointer;
+          }
+
+          .popup-hotspot {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 21px;
+            color: #d9d9d9;
+            border: 2px solid #d9d9d9;
+            padding: 5px;
+            // font-family: AvenirLTPro;
+            cursor: pointer;
+          }
+        }
+
+        .activity-container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .wave-analysis {
+            width: 540px;
+            height: 100%;
+            position: relative;
+            display: inline-block;
+            border-right: 1px solid #dadada;
+
+            .wave-animation {
+              position: relative;
+              top: 144px;
+              left: 21px;
+              z-index: -1;
+            }
+
+            .buoy-image {
+              width: 20px;
+              position: absolute;
+              z-index: 0;
+            }
+
+            .wave-analysis-data {
+              position: absolute;
+              // z-index: -1;
+              width: 100%;
+              height: 183px;
+              color: #4c4c4c;
+              border: 4px solid transparent;
+
+              &:hover {
+                border: 4px solid #feec25;
+                border-radius: 5px;
+                // cursor: url("../assets/images/REDPOINTER123.cur") 10 5,
+                //   url("../assets/images/REDPOINTER123.cur"), auto;
+              }
+
+              h2 {
+                text-align: center;
+                font-size: 16px;
+                font-weight: 900;
+                padding: 0;
+                margin: 11px;
+                // font-family: AvenirLTPro;
+              }
+
+              .wave-timer,
+              .wave-data {
+                position: relative;
+                display: inline-block;
+                height: 50px;
+                width: 470px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 10px;
+
+                .timer1,
+                .timer2,
+                .wave-count,
+                .run-time {
+                  position: absolute;
+                  height: 100%;
+                  width: 50%;
+                  display: inline-block;
+                  font-size: 14px;
+                  padding: 0 20px 0 20px;
+
+                  &.timer1 {
+                    left: 0;
+                  }
+
+                  &.timer2 {
+                    right: 0;
+                  }
+
+                  &.wave-count {
+                    left: 0;
+                  }
+
+                  &.run-time {
+                    right: 0;
+                  }
+
+                  .timer-value {
+                    width: auto;
+                    height: 100%;
+                    position: relative;
+                    left: 0;
+                    border: 1px solid #dadada;
+                    padding: 5px;
+                    // font-family: AvenirLTPro;
+                    font-size: 14px;
+                  }
+                }
+              }
+
+              .timer-heading {
+                width: 85px;
+                position: relative;
+                height: 100%;
+                display: inline-block;
+                font-size: 14px;
+                // font-family: AvenirLTPro;
+              }
+
+              // .wave-data {
+
+              //   .wave-count,
+              //   . {
+              //     position: absolute;
+              //     height: 100%;
+              //     width: 50%;
+              //     display: inline-block;
+              //     font-size: 18px;
+              //     padding: 0 20px 0 20px;
+              //   }
+
+              //   .run-time {}
+              // }
+            }
+
+            .ruler-container {
+              width: 538px;
+              height: 28.44px;
+              position: absolute;
+              // background: #FFFFFF;
+              // z-index: 0;
+              background: linear-gradient(
+                180deg,
+                rgba(224, 224, 224, 0.4150035014005602) 20%,
+                rgba(255, 255, 255, 1) 41%,
+                rgba(255, 255, 255, 1) 100%
+              );
+
+              .ruler-holder {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 28px;
+                width: 540px;
+                height: 14px;
+                background-image: url("../assets/images/ruler-dragger-active.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+
+                &:hover {
+                  background-image: url("../assets/images/ruler-dragger-hover.png");
+                  // cursor: url("../assets/images/REDPOINTER123.cur") 10 5, url("../assets/images/REDPOINTER123.cur"), auto;
+                }
+              }
+            }
+
+            .ruler {
+              width: 500px;
+              height: 28.44px;
+              position: relative;
+              left: 21px;
+              color: #4c4c4c;
+              top: 0;
+
+              // &:hover {
+              //   // cursor: url("../assets/images/REDPOINTER123.cur") 10 5,
+              //   //   url("../assets/images/REDPOINTER123.cur"), auto;
+              // }
+
+              .ruler-cm {
+                position: relative;
+                width: 62px;
+                height: 12px;
+                border-left: 1px solid #4c4c4c;
+                display: inline-block;
+                // background-color: #f3fcfa;
+                top: -2px;
+                left: 1px;
+
+                .meterRuler {
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  text-align: center;
+                  top: 12px;
+
+                  p {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    // font-family: AvenirLTPro;
+                  }
+                }
+
+                .ruler-mm {
+                  position: absolute;
+                  border-left: 1px solid #4c4c4c;
+                  height: 6px;
+                }
+
+                .ruler-mm-middle {
+                  position: absolute;
+                  border-left: 1px solid #333;
+                  height: 10px;
+                }
+
+                .ruler-number {
+                  position: absolute;
+                  left: -8px;
+                  top: 12px;
+                  font-size: 13px;
+                  // font-family: AvenirLTPro;
+                  font-weight: 500;
+
+                  &.zero-digit {
+                    left: -4px;
+                  }
+
+                  &.last {
+                    width: 30px;
+                    // left: -8px;
+                  }
+                }
+
+                &.last {
+                  width: 1px;
+                }
+              }
+            }
+
+            .wave-analysis-hotspot {
+              position: absolute;
+              // z-index: -1;
+              width: 100%;
+              height: 183px;
+              // color: #4C4C4C;
+              display: inline;
+              margin: 0;
+              padding: 0;
+              background-color: transparent;
+              border: 4px solid transparent;
+              // cursor: url("../assets/images/REDPOINTER123.cur"), auto;
+
+              &:hover {
+                border: 4px solid #feec25;
+                border-radius: 5px;
+                //cursor: url("../assets/images/REDPOINTER123.cur") 10 5, url("../assets/images/REDPOINTER123.cur"), auto;
+              }
+            }
+
+            .wave-simulator {
+              position: absolute;
+              height: 350px;
+              width: 100%;
+              top: 146px;
+              z-index: 0;
+              border: 4px solid transparent;
+              // display: block;
+
+              .gradient-screen {
+                position: absolute;
+                height: 81px;
+                top: 0;
+                width: 100%;
+                background: rgb(221, 255, 255);
+                background: linear-gradient(
+                  180deg,
+                  rgba(221, 255, 255, 1) 0%,
+                  rgba(248, 255, 255, 1) 80%,
+                  rgba(255, 255, 255, 1) 100%
+                );
+              }
+            }
+
+            .wave-simulator-hotspot {
+              position: absolute;
+              height: 315px;
+              width: 100%;
+              top: 184px;
+              display: inline;
+              z-index: 0;
+              padding: 0;
+              margin: 0;
+              background-color: transparent;
+              border: 4px solid transparent;
+              z-index: 1;
+              // cursor: url("../assets/images/REDPOINTER123.cur"), auto;
+
+              &:hover {
+                border: 4px solid #feec25;
+                border-radius: 5px;
+                //cursor: url("../assets/images/REDPOINTER123.cur") 10 5, url("../assets/images/REDPOINTER123.cur"), auto;
+              }
+            }
+          }
+
+          .wave-maker {
+            width: 158px;
+            height: 498px;
+            position: relative;
+            display: inline;
+            float: right;
+            background-color: #fcfcfc;
+            margin: 0;
+            padding: 0;
+            border: 4px solid transparent;
+            left: -2px;
+            // cursor: url("../assets/images/REDPOINTER123.cur"), auto;
+
+            &:hover {
+              border: 4px solid #feec25;
+              border-radius: 5px;
+              //cursor: url("../assets/images/REDPOINTER123.cur") 10 5, url("../assets/images/REDPOINTER123.cur"), auto;
+            }
+
+            .wave-maker-depth {
+              width: 100%;
+              height: 220px;
+              // border-bottom: 1px solid #B3B3B3;
+              position: absolute;
+              top: 0;
+              color: #4c4c4c;
+
+              .wave-maker-heading {
+                position: relative;
+                display: block;
+                width: 85%;
+                text-align: center;
+                height: 50px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+                h2 {
+                  text-align: center;
+                  font-weight: 900;
+                  // font-family: AvenirLTPro;
+                  line-height: 22px;
+                  font-size: 16px;
+                  margin: 10px;
+                }
+
+                h3 {
+                  margin: 0;
+                  font-size: 14px;
+                  text-align: center;
+                  font-weight: 700;
+                  // font-family: AvenirLTPro;
+                }
+              }
+
+              .slider-container {
+                position: relative;
+                display: block;
+                width: 120px;
+                height: 184px;
+                margin: auto;
+                top: -14px;
+                // font-family: AvenirLTPro;
+                pointer-events: none;
+
+                .range-slider {
+                  transform: rotate(-90deg);
+                  position: relative;
+                  left: 20px;
+                  top: 81px;
+                }
+
+                .shallow-range {
+                  position: absolute;
+                  top: 33px;
+                  width: 83px;
+                  font-size: 14px;
+                  left: 15px;
+                }
+
+                .deep-range {
+                  position: absolute;
+                  top: 131px;
+                  width: 83px;
+                  font-size: 14px;
+                  left: 15px;
+                }
+
+                .medium-range {
+                  position: absolute;
+                  top: 86px;
+                  width: 83px;
+                  font-size: 14px;
+                  left: 15px;
+                }
+
+                .range-border {
+                  width: 23px;
+                  // border: 1px solid #B3B3B3;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  position: absolute;
+                  right: 0;
+                  height: 2px;
+                  background-color: #b3b3b3;
+                }
+
+                // input[type="range"] {
+                //   // cursor: url("../assets/images/REDPOINTER123.cur"), auto;
+
+                //   // &::-webkit-slider-thumb {
+                //   //   cursor: url("../assets/images/REDPOINTER123.cur") 10 5, auto;
+                //   // }
+
+                //   // &::-moz-range-thumb {
+                //   //   cursor: url("../assets/images/REDPOINTER123.cur") 10 5, auto;
+                //   // }
+                // }
+
+                // input[type=range] {
+                //   -webkit-appearance: none;
+                //   width: 130px;
+                //   position: relative;
+                //   top: 0;
+                //   left: 20px;
+                //   border-radius: 10px;
+                //   top: 100px;
+                // }
+
+                // input[type=range]:focus {
+                //   outline: none;
+                // }
+
+                // input[type=range]::-webkit-slider-runnable-track {
+                //   width: 100%;
+                //   height: 2px;
+                //   cursor: pointer;
+                //   // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+                //   background: #dadada;
+                //   // border-radius: 1.3px;
+                //   // border: 0.2px solid #010101;
+                // }
+
+                // input[type=range]::-webkit-slider-thumb {
+                //   height: 30px;
+                //   width: 30px;
+                //   border-radius: 50%;
+                //   background: #1269D6;
+                //   cursor: pointer;
+                //   -webkit-appearance: none;
+                //   top: -14px;
+                //   position: relative;
+
+                //   &:hover {
+                //     cursor: url("../assets/images/REDPOINTER123.cur"), auto;
+                //   }
+                // }
+
+                // input[type=range]:focus::-webkit-slider-runnable-track {
+                //   background: #dadada;
+                // }
+
+                // input[type=range]:focus::-ms-fill-lower {
+                //   background: #dadada;
+                // }
+
+                // input[type=range]:focus::-ms-fill-upper {
+                //   background: #dadada;
+                // }
+                p {
+                  padding: 0;
+                  margin: 0;
+                  text-align: left;
+                }
+
+                .screenshot-slider {
+                  top: 25.38px;
+                  left: 71px;
+                  width: 32px;
+                  height: 130px;
+                  opacity: 0;
+                  position: absolute;
+                  background-repeat: no-repeat;
+                  // z-index: 1;
+                  background-size: 100% 100%;
+
+                  // &.deep {
+                  //   background-image: url(../assets/images/deep.png);
+                  // }
+
+                  &.medium {
+                    background-image: url(../assets/images/medium.png);
+                  }
+
+                  &.shallow {
+                    background-image: url(../assets/images/shallow.png);
+                  }
+                }
+              }
+
+              @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                .range-slider {
+                  left: 30px !important;
+                  top: 54px !important;
+
+                  // input[type=range] {}
+                }
+
+                .screenshot-slider {
+                  top: 30.38px !important;
+                  left: 71.8px !important;
+                }
+              }
+
+              @supports (-ms-ime-align: auto) {
+                .range-slider {
+                  // left: 30px !important;
+                  top: 73px !important;
+
+                  // input[type=range] {}
+                }
+
+                .screenshot-slider {
+                  top: 32.38px !important;
+                  left: 71.5px !important;
+                }
+              }
+
+              @-moz-document url-prefix() {
+                .range-slider {
+                  left: 21px !important;
+                  top: 85px !important;
+                }
+
+                .screenshot-slider {
+                  top: 30.38px !important;
+                  left: 72px !important;
+                }
+              }
+
+              .middleLine {
+                position: absolute;
+                width: calc(100% - 20px);
+                left: 0;
+                right: 0;
+                margin: auto;
+                bottom: 0;
+                height: 1px;
+                background-color: #dadada;
+              }
+            }
+
+            .wave-frequency {
+              width: 100%;
+              height: 277px;
+              position: absolute;
+              top: 224px;
+              color: #4c4c4c;
+
+              h4 {
+                font-size: 14px;
+                text-align: center;
+                font-weight: 700;
+                // font-family: AvenirLTPro;
+                position: relative;
+                top: 10px;
+              }
+
+              .frequency-measure {
+                width: 110px;
+                height: 56px;
+                position: relative;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-image: url("../assets/images/gs.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                top: 45px;
+                // font-family: AvenirLTPro;
+
+                .niddle-circle {
+                  width: 50px;
+                  height: 50px;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                  top: 28px;
+                  background-image: url("../assets/images/knob.png");
+                  background-size: 100% 100%;
+                  background-repeat: no-repeat;
+                }
+
+                &.medium-state {
+                  .frequency-medium {
+                    p {
+                      font-weight: 900;
+                    }
+                  }
+                }
+
+                &.high-state {
+                  .frequency-high {
+                    p {
+                      font-weight: 900;
+                    }
+                  }
+                }
+
+                &.low-state {
+                  .frequency-low {
+                    p {
+                      font-weight: 900;
+                    }
+                  }
+                }
+
+                p {
+                  font-size: 14px;
+                  text-align: center;
+                  font-weight: 500;
+                }
+
+                .low {
+                  position: absolute;
+                  width: 32px;
+                  height: 40px;
+                  left: 0;
+                  top: 16px;
+                  display: inline-block;
+                  margin: 0;
+                  background: transparent;
+                  border: none;
+                  box-shadow: none;
+                }
+
+                .medium {
+                  position: absolute;
+                  width: 53px;
+                  height: 25px;
+                  left: 28px;
+                  top: 0;
+                  display: inline-block;
+                  margin: 0;
+                  background: transparent;
+                  border: none;
+                  box-shadow: none;
+                }
+
+                .high {
+                  position: absolute;
+                  width: 32px;
+                  height: 42px;
+                  left: 77px;
+                  top: 14px;
+                  display: inline-block;
+                  margin: 0;
+                  background: transparent;
+                  border: none;
+                  box-shadow: none;
+                  left: unset;
+                }
+
+                .frequency-low {
+                  position: absolute;
+                  left: -13px;
+                  top: -12px;
+                }
+
+                .frequency-medium {
+                  position: absolute;
+                  top: -36px;
+                  left: 0;
+                  right: 0;
+                  margin: auto;
+                }
+
+                .frequency-high {
+                  position: absolute;
+                  right: -15px;
+                  top: -12px;
+                }
+
+                .niddle-container {
+                  transform-origin: center;
+                  // transform: rotate(-60deg);
+                  position: absolute;
+                  left: 0;
+                  width: 100%;
+                  height: 112px;
+
+                  &.low-deg {
+                    transform: rotate(-60deg);
+                  }
+
+                  &.medium-deg {
+                    transform: rotate(0deg);
+                  }
+
+                  &.high-deg {
+                    transform: rotate(60deg);
+                  }
+
+                  .niddle {
+                    position: absolute;
+                    height: 52px;
+                    width: 6.67px;
+                    background-image: url("../assets/images/niddle.png");
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    top: 7px;
+                  }
+                }
+              }
+
+              button {
+                height: 33px;
+                line-height: 33px;
+                width: 110px;
+                background: #fff;
+                color: #1269d6;
+                // -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+                // -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+                border: 2px solid #1269d6;
+                font-size: 18px;
+                font-weight: 500;
+                z-index: 20;
+                padding: 0;
+                -webkit-box-sizing: content-box;
+                -moz-box-sizing: content-box;
+                box-sizing: content-box;
+                display: block;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: block;
+                position: relative;
+
+                &:hover {
+                  background-color: #1165bf;
+                  color: #fff;
+                  // cursor: url("../assets/images/REDPOINTER123.cur") 10 5,
+                  //   url("../assets/images/REDPOINTER123.cur"), auto;
+                }
+
+                &.start-button {
+                  top: 75px;
+                }
+
+                &.reset-button {
+                  top: 90px;
+                  cursor: pointer;
+
+                  &.disable-reset-button {
+                    pointer-events: none;
+                    background-color: #c7c7c7;
+                    color: #ffffff;
+                    border: 2px solid #c7c7c7;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .vl-introduce-right {
+        background-color: white;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        min-height: 130px;
+
+        .vl-audio-container {
+          height: 50px;
+          padding-left: 2px;
+        }
+
+        .text-container {
+          font-size: 23px;
+          color: #4c4c4c;
+          overflow-y: auto;
+          height: calc(100% - 60px);
+          line-height: 28px;
+          padding: 0 7px 0 0;
+
+          p {
+            margin: 0 0 10px;
+          }
+
+          h2 {
+            font-family: AvenirHeavy;
+            // font-weight: 400;
+            margin: 0 0 10px;
+            font-size: 21px;
+          }
+        }
+      }
+
+      // }
+    }
+
+    .vl-explore {
+      display: flex;
+      height: 100%;
+
+      .vl-hotspotpanel-container {
+        .text-section {
+          left: 0px;
+        }
+      }
+
+      .vl-explore-left {
+        width: 700px;
+        height: 497px;
+
+        .image-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+
+        .hotspot_image {
+          position: absolute;
+          box-sizing: border-box;
+          &.universal_lab_equipment {
+            height: 172px;
+            width: 190px;
+            top: 23px;
+            left: 50px;
+            background: url(../assets/images/introduce/universal_lab_equipment.png)
+              no-repeat;
+            background-size: 190px;
+            box-sizing: border-box;
+          }
+          &.microscope {
+            height: 176px;
+            width: 100px;
+            top: 23px;
+            left: 310px;
+            background: url(../assets/images/introduce/microscope.png) no-repeat;
+            background-size: 100px;
+            box-sizing: border-box;
+          }
+          &.spectrophotometer {
+            height: 172px;
+            width: 180px;
+            top: 23px;
+            left: 470px;
+            background: url(../assets/images/introduce/spectrophotometer.png)
+              no-repeat;
+            background-size: 180px;
+            box-sizing: border-box;
+          }
+
+          &.water_samples {
+            height: 130px;
+            width: 120px;
+            bottom: 82px;
+            left: 160px;
+            background: url(../assets/images/introduce/water_samples.png)
+              no-repeat;
+            background-size: 120px;
+            box-sizing: border-box;
+          }
+
+          &.slides {
+            height: 120px;
+            width: 100px;
+            bottom: 82px;
+            left: 410px;
+            background: url(../assets/images/introduce/slides.png) no-repeat;
+            background-size: 100px;
+            box-sizing: border-box;
+          }
+        }
+
+        .hotspot {
+          height: 32px;
+          width: 96px;
+          background-color: white;
+          // border: 0.5px solid #333333;
+          border-radius: 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          cursor: pointer;
+          padding: 0px;
+          &.active {
+            border: 1px solid #2a6b9d;
+            span {
+              color: #1269d6;
+            }
+          }
+          &.hotspotIntroduce5 {
+            top: 210px;
+            left: 20px;
+            width: 230px;
+          }
+          &.hotspotIntroduce1 {
+            top: 210px;
+            left: 300px;
+            width: 120px;
+          }
+          &.hotspotIntroduce4 {
+            top: 210px;
+            left: 470px;
+            width: 180px;
+          }
+          &.hotspotIntroduce3 {
+            bottom: 35px;
+            left: 130px;
+            width: 145px;
+          }
+          &.hotspotIntroduce2 {
+            bottom: 35px;
+            left: 435px;
+            width: 70px;
+          }
+          span {
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 20px;
+            text-align: center;
+          }
+        }
+      }
+
+      .vl-explore-right {
+        background-color: white;
+        height: 100%;
+        // overflow-y: auto;
+        // overflow: auto;
+        flex: 1;
+
+        .vl-hotspotpanel-sidePanel {
+          img {
+            // height: 200px;
+            width: 254px;
+            position: relative;
+            left: 50%;
+            right: 0;
+            transform: translateX(-50%);
+            margin: auto;
+            top: 5px;
+
+            @media (max-height: 640px) {
+              width: 144px;
+            }
+
+            @media (min-height: 640px) {
+              width: 144px;
+            }
+          }
+        }
+
+        .vl-audio-container {
+          height: 45px;
+          padding-left: 2px;
+        }
+
+        .vl-explore-right-text-parent {
+          height: 100%;
+        }
+
+        .vl-explore-right-text-container {
+          font-size: 23px;
+          color: #4c4c4c;
+          overflow-y: auto;
+          height: calc(100% - 60px);
+          line-height: 28px;
+          padding: 0 7px 0 0;
+
+          p,
+          li {
+            margin: 0 0 20px 0px;
+          }
+
+          br {
+            margin: 0px;
+            padding: 0px;
+          }
+
+          h2 {
+            font-family: AvenirHeavy;
+            font-weight: 400;
+            margin: 0 0 10px;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+
+    .vl-indroduce-footer {
+      background-color: #f7f7f7;
+      width: 100%;
+      height: 35px;
+      text-align: center;
+    }
+  }
+}
+
+&.portrait.medium {
+  .vl-introduce-container {
+    .vl-introduce {
+      flex-direction: column;
+
+      .vl-introduce-left {
+        > div {
+          margin: auto;
+        }
+      }
+
+      // .vl-introduce-right {
+      //   // height: 210px;
+      //   // padding: 10px;
+      // }
+    }
+  }
+}
+
+&.landscape {
+  .vl-introduce-container {
+    .vl-introduce {
+      .vl-introduce-left {
+        &.tab1 {
+          width: 450px;
+        }
+      }
+    }
+  }
+}
+
+&.landscape.small {
+  .vl-introduce-container {
+    .vl-introduce {
+      .vl-scalable-wrapper-container {
+        padding: 5px;
+
+        .vl-scalable-wrapper-right {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>
+    <%= ACTIVITY_CONFIG.title %>
+  </title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .loading-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 999;
+      background: #00000029;
+    }
+
+    .loader {
+      border: 13px solid #f3f3f3;
+      border-top: 16px solid #1269D6;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      animation: spin 2s linear infinite;
+      position: absolute;
+      margin: 0 auto;
+      top: 50%;
+      left: 50%;
+      margin-top: -60px;
+      margin-left: -60px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  <!-- INFORM  THE LATEST AVERSION INTERFACE WITH THIS CODE   -->
+  <script>
+    var MQ = MathQuill.getInterface(2);
+  </script>
+</head>
+
+<body class="no-outline">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="loading-container">
+    <div class="loader"></div>
+  </div>
+  <div id="root"></div>
+
+  <% if (PRECACHE_IMAGES) { %>
+    <script type="text/javascript" src="image-list.js"></script>
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+.vl-scalable-wrapper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  // padding: 10px;
+  // border: 1px solid #dadada;
+  // border-bottom: none;
+  .vl-scalable-wrapper-left {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    // border: 1px solid #dadada;
+
+    .vl-scalable-container {
+      display: inline-block;
+      // border: 1px solid #dadada;
+    }
+  }
+
+  .vl-scalable-wrapper-right {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    // padding: 10px 10px 10px 0;
+    overflow: hidden;
+  }
+}
+
+&.portrait,
+&.landscape.medium,
+&.landscape.small {
+  .vl-scalable-wrapper-container {
+    display: block;
+
+    .vl-scalable-wrapper-left {
+      margin: 10px auto 0px auto;
+      display: block;
+    }
+
+    .vl-scalable-wrapper-right {
+      display: block;
+      padding: 10px;
+    }
+  }
+}

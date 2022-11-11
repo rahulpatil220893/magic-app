@@ -1,0 +1,9 @@
+$app-namespace: "vl";
+$fa-font-path: "../../fontawesome/webfonts";
+
+@import '../../app/stylesheets/global';
+
+.#{$app-namespace} {
+  @import '../../app/stylesheets/main';
+  @import 'components/all';
+}

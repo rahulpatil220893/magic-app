@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="38px" viewBox="0 0 23 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect id="path-1" x="3" y="0" width="16" height="16"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="3" y="22" width="16" height="16"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="16" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="SAVAAS-global-component" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-86.000000, -180.000000)">
+            <g id="special_icon" transform="translate(86.000000, 180.000000)">
+                <use id="Rectangle" stroke="#000000" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="1" xlink:href="#path-1"></use>
+                <use id="Rectangle-Copy" stroke="#000000" mask="url(#mask-4)" stroke-width="4" stroke-dasharray="1" xlink:href="#path-3"></use>
+                <rect id="Rectangle" fill="#000000" x="0" y="18.6067692" width="23" height="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

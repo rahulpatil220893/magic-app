@@ -1,0 +1,72 @@
+.vl-droppable-container {
+  height: 100%;
+  width: 100%;
+
+  .vl-sticky-wrapper {
+    position: absolute;
+    padding: 20px 4px 20px 10px;
+    //padding: 10px;
+    width: 215px;
+    height: auto;
+    right: 20px;
+    background: #f8f7b6;
+    cursor: move;
+    box-sizing: content-box;
+    max-height: 320px;
+    min-height: 20px;
+    user-select: text !important;
+    -ms-user-select: text !important;
+    -webkit-user-select: text !important;
+    z-index: 11;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+
+    .vl-stick-notes {
+      color: #666;
+      padding: 0;
+      width: 204px;
+      height: auto;
+      overflow-y: auto;
+      word-wrap: break-word;
+      box-sizing: content-box;
+      overflow: hidden;
+      border: none;
+      font: 400 16px/1 Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      background: #f8f7b6;
+      //padding: 20px 4px 20px 10px;
+      cursor: text;
+      user-select: text !important;
+      -ms-user-select: text !important;
+      -webkit-user-select: text !important;
+      text-align: left;
+      min-height: 20px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:not(:focus):empty:before {
+        content: attr(placeholder);
+        display: block;
+        color: #646665;
+        font-family: AvenirBook;
+        cursor: text;
+        font-weight: 500;
+        font-size: 18px;
+        pointer-events: none;
+      }
+
+      * {
+        -webkit-user-select: text !important;
+        -khtml-user-select: text !important;
+        -moz-user-select: -moz-text !important;
+        -o-user-select: text !important;
+        user-select: text !important;
+        -ms-user-select: text !important;
+      }
+    }
+  }
+}
