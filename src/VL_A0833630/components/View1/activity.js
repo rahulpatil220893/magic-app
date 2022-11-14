@@ -27,7 +27,8 @@ class Activity extends React.Component {
         },
         () => {
           if (
-            this.state.hotSpotsVisited.length === hotSpotDataIntroduce.length
+            this.state.hotSpotsVisited.length + 1 ===
+            hotSpotDataIntroduce.length
           ) {
             markCompletedActivity(0, 1);
           }

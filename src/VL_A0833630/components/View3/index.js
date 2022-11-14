@@ -84,6 +84,10 @@ class View3 extends React.Component {
     ) {
       this.getTabIndex();
     }
+
+    if (this.props.currentSubTab === 1 && this.props.currentTab === 1) {
+      this.props.markCompletedActivity(1, 1);
+    }
   }
   getTabIndex = () => {
     const div = document.querySelector(".vl-discover-right-text-container");
@@ -307,49 +311,6 @@ class View3 extends React.Component {
             <div className="vl-discover">
               <ScalableWrapperContainer screenIndex={index} subScreenIndex={0}>
                 <div className="vl-discover-left">
-                  {/* <Activity
-                    deleteelements1={this.deleteelements1}
-                    resetHandler1={this.resetHandler1}
-                    updateFocusTooltip={updateFocusTooltip}
-                    toggleHotspotPopup={toggleHotspotPopup}
-                    currentHotspotPopup={currentHotspotPopup}
-                    thisback={tab3.slide1.thisback}
-                    scale={scale}
-                    buttontext={tab3.slide1}
-                    draggableImg={tab3.slide1.draggableImg}
-                    dropzone={tab3.slide1.dropzone}
-                    imgAlt={tab3.slide1.imgAlt}
-                    defaultImg={tab3.slide1.defaultImg}
-                    deleteActiveElements={this.state.deleteActiveElements}
-                    resetDrop={this.resetDrop}
-                    commonDropZone={tab3.slide1.commonDropZone}
-                    updateAriaLiveText={updateAriaLiveText}
-                    markCompletedActivity={markCompletedActivity}
-                    t={this.props.t}
-                    screenIndex={index}
-                    subTabIndex={this.subTabIndex}
-                    togglePopup={togglePopup}
-                    setPopupMessage={setPopupMessage}
-                    currentSubTab={currentSubTab}
-                    currentTab={currentTab}
-                    shipOnScreen={this.state.shipOnScreen}
-                    dropItem={dropItem}
-                    checkedDrop={checkedDrop}
-                    setDropped={setDropped}
-                    resetDropperValue={resetDropperValue}
-                    selectedDraggable={selectedDraggable}
-                    selectDraggable={selectDraggable}
-                    setAccessible={setAccessible}
-                    isAccessible={isAccessible}
-                    setShipposition={this.setShipposition}
-                    tab={0}
-                    showMapHandler={this.showMapHandler}
-                    currentLangData={currentLangData}
-                    resetAllActivities={resetAllActivities}
-                    mapShow={this.state.mapPopupHandlerState}
-                    defaultLang={defaultLang}
-                    isPopupActive={isPopupActive}
-                  /> */}
                   <MicroscopeActivity
                     markCompletedActivity={markCompletedActivity}
                     updateAriaLiveText={updateAriaLiveText}
@@ -363,19 +324,13 @@ class View3 extends React.Component {
                     subTabIndex={this.subTabIndex}
                     toggleHotspotPopup={toggleHotspotPopup}
                     currentHotspotPopup={currentHotspotPopup}
+                    selectedDraggable={selectedDraggable}
+                    selectDraggable={selectDraggable}
+                    setAccessible={setAccessible}
+                    isAccessible={isAccessible}
+                    dropzone={tab3.slide1.dropzone}
+                    draggableImg={tab3.slide1.draggableImg}
                   />
-                  {currentLangData.hotSpotData31
-                    .filter((val) => val.type.includes("left"))
-                    .map((hotSpot, index) => {
-                      return (
-                        <HotspotConatiner
-                          data={hotSpot}
-                          currentLangData={currentLangData}
-                          key={`hotSpot_${index}`}
-                          updateAriaLiveText={updateAriaLiveText}
-                        />
-                      );
-                    })}
                 </div>
                 <div className="vl-discover-right">
                   {currentLangData.hotSpotData31
