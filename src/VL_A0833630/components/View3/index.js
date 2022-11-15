@@ -10,6 +10,8 @@ import DiscoverMapPopup from "../popup/discoverMapPopup";
 import { activeDrawing } from "../../actions";
 import HotspotConatiner from "../../containers/HotspotConatiner";
 import MicroscopeActivity from "./MicroscopeActivity";
+import WatersampleActivity from "./WatersampleActivity";
+
 class View3 extends React.Component {
   constructor(props) {
     super(props);
@@ -278,6 +280,7 @@ class View3 extends React.Component {
       updateFocusTooltip,
     } = this.props;
     const completed = markedActivities?.[currentTab];
+    console.log("currentLangData.tab3.slide3", currentLangData.tab3.slide3);
     return (
       <div className="vl-discover-container">
         {this.state.mapPopupHandlerState ? (
@@ -431,7 +434,7 @@ class View3 extends React.Component {
             <div className="vl-discover">
               <ScalableWrapperContainer screenIndex={index} subScreenIndex={2}>
                 <div className="vl-discover-left">
-                  <Activity
+                  {/* <Activity
                     deleteelements1={this.deleteelements1}
                     resetHandler3={this.resetHandler3}
                     updateFocusTooltip={updateFocusTooltip}
@@ -475,6 +478,20 @@ class View3 extends React.Component {
                     resetAllActivities={resetAllActivities}
                     mapShow={this.state.mapPopupHandlerState}
                     defaultLang={defaultLang}
+                    isPopupActive={isPopupActive}
+                  /> */}
+                  <WatersampleActivity
+                    tab={2}
+                    toggleHotspotPopup={toggleHotspotPopup}
+                    currentHotspotPopup={currentHotspotPopup}
+                    updateAriaLiveText={updateAriaLiveText}
+                    markCompletedActivity={markCompletedActivity}
+                    t={this.props.t}
+                    selectedDraggable={selectedDraggable}
+                    selectDraggable={selectDraggable}
+                    setAccessible={setAccessible}
+                    isAccessible={isAccessible}
+                    currentLangData={currentLangData}
                     isPopupActive={isPopupActive}
                   />
                 </div>

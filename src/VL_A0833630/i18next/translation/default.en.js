@@ -58,9 +58,9 @@ export default {
     },
     slide2: {
       audio: exlpore2Audio,
-      body: `<p>Select the microscope, slides, water samples, spectrophotometer, general lab equipment to learn more about the materials used in the lab.</p>`,
+      body: `<p>Select the microscope, slides, water samples, spectrophotometer and general lab equipment to learn more about the materials used in the lab.</p>`,
       imgAlt:
-        "Select the microscope, slides, water samples, spectrophotometer, general lab equipment.",
+        "Select the microscope, slides, water samples, spectrophotometer and general lab equipment.",
     },
   },
   tab2: {
@@ -154,11 +154,11 @@ export default {
       //   'Watch your speed in the "No Wake" zone. Reduce your engine force.',
       // investigateAlertText3: "Complete.",
       // investigateAlertText4: "You are too close to the shore!",
-      body: `<p>Select organisms with traits that would help them survive in the Yasuni National Park environment. Place the organisms on the image and select “Finalize Choices.”
-              </p><p>Record notes in your Lab Notebook about your choices. For correct choices, record how the organisms’ traits help them survive in this environment.</p>`,
-      imgAlt: "Yasuni National Park drop zone with -1- dropped on it.",
+      body: `<p>Water samples are available from six upstream sites for analysis to determine which site has excess nitrogen in their run-off that could be causing the algal bloom. Only select three sites that are most likely to have caused the excess nitrogen in the water to test.</p><p>By running the water samples through the spectrophotometer, you will be able to determine the nitrogen concentration in each sample</p><h2><strong>Procedure:</strong></h2><ol><li>Measure a blank by placing the blank cuvette into the spectrophotometer and pressing “Blank”.</li><li>Place each sample into the spectrophotometer one at a time. Record your observations of each result in the lab notebook.</li></ol>`,
+      imgAlt:
+        "Water samples are available from six upstream sites for analysis to determine which site has excess nitrogen",
       defaultImg:
-        "Yasuni National Park drop zone without any organisms dropped on it.",
+        "Water samples are available from six upstream sites for analysis to determine which site has excess nitrogen",
       isAltText: "is",
       areAltText: "are",
       andAltText: "and",
@@ -260,6 +260,24 @@ export default {
           target: "",
           label: "",
           liveText: "",
+        },
+      ],
+      lables: [
+        {
+          lable: "Pipette",
+          class: "pipette",
+        },
+        {
+          lable: "Spectrophotometer",
+          class: "spectrophotometer",
+        },
+        {
+          lable: "Cuvette holder",
+          class: "cuvette_holder",
+        },
+        {
+          lable: "Waste container",
+          class: "waste_container",
         },
       ],
     },
@@ -483,7 +501,7 @@ export default {
       audio: discover22Audio,
     },
   ],
-  hotSpotData33: [
+  hotSpotData33_old: [
     {
       id: "hotspot310",
       type: "right",
@@ -740,6 +758,21 @@ export default {
       ],
       showCloseButton: false,
       audio: discover11Audio,
+    },
+  ],
+  hotSpotData33: [
+    {
+      id: "water_level_map",
+      type: "right",
+      label: "Map",
+      alt: "water leve check map",
+      title: "",
+      image: "water_level_map",
+      info: [
+        `<p>You have discovered microalgae in both the fish and water samples, which indicates that an algal bloom is in the water where the fish died.</p><p>An algal bloom is a rapid growth of microscopic algae in water, commonly caused by eutrophication. Eutrophication is the concept in which a sudden and dramatic increase in nutrients in the water, frequently due to run-off from land, causes a large amount of growth in plant life and death of animal life. In this case, there is an excess of nitrogen in the water that caused the growth of the algal bloom and the hypoxic (or low oxygen) conditions.</p><p>Now that we know an algal bloom is present, we need to determine where the excess nitrogen is coming from.</p>`,
+      ],
+      showCloseButton: true,
+      audio: discover31Audio,
     },
   ],
 
