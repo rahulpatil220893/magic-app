@@ -280,7 +280,6 @@ class View3 extends React.Component {
       updateFocusTooltip,
     } = this.props;
     const completed = markedActivities?.[currentTab];
-    console.log("currentLangData.tab3.slide3", currentLangData.tab3.slide3);
     return (
       <div className="vl-discover-container">
         {this.state.mapPopupHandlerState ? (
@@ -496,15 +495,6 @@ class View3 extends React.Component {
                   />
                 </div>
                 <div className="vl-discover-right">
-                  {currentLangData.hotSpotData33.map((hotSpot, index) => {
-                    return (
-                      <HotspotConatiner
-                        data={hotSpot}
-                        currentLangData={currentLangData}
-                        key={`hotSpot_${index}`}
-                      />
-                    );
-                  })}
                   <div className="vl-audio-container">
                     <Audio
                       audiosrc={currentLangData.tab3.slide3.audio}

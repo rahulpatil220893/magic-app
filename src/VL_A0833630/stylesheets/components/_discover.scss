@@ -188,6 +188,59 @@
             width: 100%;
             height: calc(100% - 110px);
 
+            .accessible-list {
+              ul {
+                li {
+                  a {
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline-block;
+                    background: transparent;
+                    border: none;
+                    position: absolute;
+                    height: 70px;
+                    width: 36px;
+                  }
+                  &.water_sample1 {
+                    a {
+                      top: 258px;
+                      left: 148px;
+                    }
+                  }
+                  &.water_sample2 {
+                    a {
+                      bottom: 0x;
+                      left: 190px;
+                    }
+                  }
+                  &.water_sample3 {
+                    a {
+                      bottom: 276px;
+                      left: 312px;
+                    }
+                  }
+                  &.water_sample4 {
+                    a {
+                      bottom: 182px;
+                      left: 162px;
+                    }
+                  }
+                  &.water_sample5 {
+                    a {
+                      bottom: 182px;
+                      left: 224px;
+                    }
+                  }
+                  &.water_sample6 {
+                    a {
+                      bottom: 182px;
+                      left: 286px;
+                    }
+                  }
+                }
+              }
+            }
+
             .hotspot_image {
               position: absolute;
               box-sizing: border-box;
@@ -248,6 +301,98 @@
                 bottom: 220px;
                 left: 20px;
               }
+              &.water_sample_lable1 {
+                bottom: 254px;
+                left: 200px;
+              }
+              &.water_sample_lable2 {
+                bottom: 254px;
+                left: 262px;
+              }
+              &.water_sample_lable3 {
+                bottom: 254px;
+                left: 322px;
+              }
+              &.water_sample_lable4 {
+                bottom: 160px;
+                left: 172px;
+              }
+              &.water_sample_lable5 {
+                bottom: 160px;
+                left: 234px;
+              }
+              &.water_sample_lable6 {
+                bottom: 160px;
+                left: 296px;
+              }
+            }
+            .water_bottle {
+              position: absolute;
+              height: 72px;
+              width: 32px;
+              bottom: 199px;
+              left: 15px;
+              background: url(../assets/images/explore/activity3/water_bottle.png)
+                no-repeat;
+              background-size: 32px;
+              box-sizing: border-box;
+              &.water_sample1 {
+                bottom: 274px;
+                left: 190px;
+              }
+              &.water_sample2 {
+                bottom: 276px;
+                left: 250px;
+              }
+              &.water_sample3 {
+                bottom: 276px;
+                left: 312px;
+              }
+              &.water_sample4 {
+                bottom: 182px;
+                left: 162px;
+              }
+              &.water_sample5 {
+                bottom: 182px;
+                left: 224px;
+              }
+              &.water_sample6 {
+                bottom: 182px;
+                left: 286px;
+              }
+            }
+            .tooltip {
+              &.tooltip_pipette_dragging {
+                right: 60px;
+                top: 50px;
+              }
+            }
+            .draggableBtn {
+              position: absolute;
+              border: none;
+              background: transparent;
+              z-index: 0;
+              &:hover {
+                box-shadow: none !important;
+              }
+              .btn_pipette_dragging {
+                top: 90px;
+                left: 376px;
+                width: 46px;
+                height: 160px;
+              }
+            }
+            .div_pipette_dragging {
+              background-image: url(../assets/images/explore/activity3/pipette.png);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              width: 44px;
+              height: 158px;
+              position: absolute;
+              cursor: pointer;
+              top: 90px;
+              left: 376px;
+              z-index: 9999;
             }
           }
         }
