@@ -1,6 +1,10 @@
-import React, { createRef, useState, useEffect } from "react";
+import React, { createRef, useState, useEffect, useRef } from "react";
+import { isTablet } from "react-device-detect";
+
 import AccessibleDnDList from "../../../app/components/AccessibleList";
 import Tooltip from "../../../app/components/Tooltip";
+import Audio from "../../containers/AudioConatiner";
+
 const WatersampleActivity = (props) => {
   const {
     toggleHotspotPopup,
@@ -11,21 +15,36 @@ const WatersampleActivity = (props) => {
     isAccessible,
     setAccessible,
     selectDraggable,
+    currentTab,
+    currentSubTab,
   } = props;
-  const { hotSpotData33, commonWords, tab3 } = currentLangData;
+  const { hotSpotData33, commonWords, tab3, popups } = currentLangData;
   const [hotSpotsVisited, setHotSpotsVisited] = useState([]);
   const [droppedElements, setDroppedElements] = useState([]);
   const [disableDraggableButton, setDisableDraggableButton] = useState(false);
+  const [showPopup, setShowPopup] = useState({
+    status: false,
+    id: "",
+  });
+  const [sampleRecords, setSampleRecords] = useState({
+    sample1: 0.5,
+    sample2: 0.8,
+    sample3: 1.8,
+  });
 
   let dndRef = createRef(null);
   let activeElement = createRef(null);
+  const popButton = useRef(null);
 
   const toggleHotspotPopupHandler = (index) => {
-    currentHotspotPopup.includes(index) ||
-      toggleHotspotPopup([...currentHotspotPopup, index]);
+    setShowPopup({
+      status: true,
+      id: index,
+    });
     if (!hotSpotsVisited.includes(index)) {
       setHotSpotsVisited((val) => [...val, index]);
     }
+    popButton.current.focus();
   };
 
   const initiateDraggableElements = () => {
@@ -78,7 +97,8 @@ const WatersampleActivity = (props) => {
   const dropOnList = () => {};
 
   const toolTipShow = (e) => {
-    const div = e.currentTarget.previousSibling.children[0];
+    const div = e.currentTarget.previousSibling;
+    console.log("div", div);
     if (div && div.classList != undefined) {
       div.classList.add("show");
       div.setAttribute("aria-hidden", false);
@@ -91,6 +111,13 @@ const WatersampleActivity = (props) => {
       div.classList.remove("show");
       div.setAttribute("aria-hidden", true);
     }
+  };
+
+  const closePopup = () => {
+    setShowPopup({
+      status: false,
+      id: "",
+    });
   };
 
   return (
@@ -147,14 +174,14 @@ const WatersampleActivity = (props) => {
           );
         })}
         {tab3.slide3.draggable.map((val) => (
-          <div key={`draggable${val.id}`}>
+          <div className={`${val.class}`} key={`draggable${val.id}`}>
             <div
-              className={`div_${val.class} draggable`}
+              className={`draggable`}
               data-source={val.type}
               data-class={val.class}
               aria-hidden="true"
               onClick={(e) =>
-                this.arrowsEnterClick({
+                arrowsEnterClick({
                   source: val.type,
                   class: val.class,
                 })
@@ -167,7 +194,6 @@ const WatersampleActivity = (props) => {
               />
             </div>
             <button
-              className={`draggableBtn btn_${val.class}`}
               data-source={val.type}
               data-class={val.class}
               disabled={disableDraggableButton}
@@ -186,7 +212,81 @@ const WatersampleActivity = (props) => {
             ></button>
           </div>
         ))}
-        <div />
+      </div>
+      <div
+        className={`discover-alert-popup ${!showPopup.status ? "hidden" : ""}`}
+      >
+        <div className="popup-container">
+          <div className="header">
+            <div className="close_action">
+              <button
+                type="button"
+                aria-label={popups.closeButton}
+                className="vl-hotspot-closeButton icon-closenote"
+                onClick={closePopup}
+                tabIndex={isPopupActive ? "-1" : null}
+                ref={popButton}
+                onMouseOver={(e) => {
+                  isTablet ? null : toolTipShow(e);
+                }}
+                onMouseLeave={(e) => toolTipHide(e)}
+                onFocus={(e) => {
+                  document.body.className == "no-outline"
+                    ? null
+                    : toolTipShow(e);
+                }}
+                onBlur={(e) => toolTipHide(e)}
+              />
+              <Tooltip
+                title={popups.closeButton}
+                classes="Close"
+                id={popups.closeButton}
+                position="left"
+              />
+            </div>
+          </div>
+          <div className="body">
+            {showPopup.id === "water_level_map" ? (
+              <div className="map_image" tabIndex={isPopupActive ? "-1" : null}>
+                {sampleRecords.sample1 > 0 ? (
+                  <span className="sample1">{sampleRecords.sample1} mg/L</span>
+                ) : (
+                  ""
+                )}
+                {sampleRecords.sample2 > 0 ? (
+                  <span className="sample2">{sampleRecords.sample2} mg/L</span>
+                ) : (
+                  ""
+                )}
+                {sampleRecords.sample3 > 0 ? (
+                  <span className="sample3">{sampleRecords.sample3} mg/L</span>
+                ) : (
+                  ""
+                )}
+              </div>
+            ) : (
+              ""
+            )}
+            {showPopup.id === "invalid_sample_test" ? (
+              <div className="popup-text-container">
+                <div className="vl-audio-container">
+                  <Audio
+                    audiosrc={tab3.slide3.invalidWaterSampleAudio}
+                    oldProps={props}
+                  />
+                </div>
+                <div
+                  className="popup-text"
+                  dangerouslySetInnerHTML={{
+                    __html: tab3.slide3.invalidWaterSampleText,
+                  }}
+                />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

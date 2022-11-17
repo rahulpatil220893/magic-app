@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import RocketAnimaton from "./RocketAnimation";
+// import RocketAnimaton from "./RocketAnimation";
 import AccessibleDnDList from "../../../app/components/AccessibleList";
 import { t } from "i18next";
 import { isSafari, isTablet, isMacOs } from "react-device-detect";

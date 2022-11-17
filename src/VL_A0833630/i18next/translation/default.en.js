@@ -169,6 +169,9 @@ export default {
       ocotilloimage2: ocotilloimage2,
       zebraimage: zebraimage,
       thisback: 3,
+      invalidWaterSampleAudio: discover3Audio,
+      invalidWaterSampleText:
+        "This is not the best water sample to test. Revisit the map and choose another water sample.",
       draggable: [
         {
           id: "draggingElement1",

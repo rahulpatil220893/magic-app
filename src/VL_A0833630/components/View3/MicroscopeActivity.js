@@ -195,30 +195,6 @@ const MicroscopeActivity = (props) => {
             <span>{val.text}</span>
           </div>
         ))}
-        {/* <div className="slide-box fish_slide">
-          <div className="highlight_box">
-            <div className="slide_place_box">
-              <div
-                className={`slide_sample fish_sample draggable ${
-                  droppedElements === "fish_sample" ? "hidden" : ""
-                }  ${disableDraggableButton ? "disable" : ""}`}
-                data-type="fish_sample"
-                tabIndex="-1"
-                aria-hidden="true"
-                onClick={(e) => arrowsEnterClick(e)}
-              />
-              <button
-                data-type="fish_sample"
-                aria-label="fish sample slide draggable"
-                tabIndex={isPopupActive || showPopup ? "-1" : null}
-                aria-hidden={isPopupActive || showPopup ? true : false}
-                disabled={disableDraggableButton}
-                onClick={(e) => arrowsEnterClick(e)}
-              />
-            </div>
-          </div>
-          <span>Fish sample</span>
-        </div> */}
         <div className="actions">
           <button
             className="reset-btton"
