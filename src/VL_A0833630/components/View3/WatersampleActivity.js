@@ -4,6 +4,8 @@ import { isTablet } from "react-device-detect";
 import AccessibleDnDList from "../../../app/components/AccessibleList";
 import Tooltip from "../../../app/components/Tooltip";
 import Audio from "../../containers/AudioConatiner";
+import Video from "../../../app/components/Video";
+import videoUrl from "../../assets/videos/activity_anim.mp4";
 
 const WatersampleActivity = (props) => {
   const {
@@ -15,13 +17,22 @@ const WatersampleActivity = (props) => {
     isAccessible,
     setAccessible,
     selectDraggable,
-    currentTab,
-    currentSubTab,
+    selectedDraggable,
+    updateAriaLiveText,
   } = props;
   const { hotSpotData33, commonWords, tab3, popups } = currentLangData;
+  const [showVideo, setShowVideo] = useState(false);
   const [hotSpotsVisited, setHotSpotsVisited] = useState([]);
   const [droppedElements, setDroppedElements] = useState([]);
-  const [disableDraggableButton, setDisableDraggableButton] = useState(false);
+  const [disableDraggableButton, setDisableDraggableButton] = useState({
+    pipette: false,
+    cuvette: true,
+    open: true,
+    close: true,
+    start: true,
+    blank: true,
+  });
+  const [openCloseBtn, setOpenCloseBtn] = useState("close");
   const [showPopup, setShowPopup] = useState({
     status: false,
     id: "",
@@ -32,9 +43,12 @@ const WatersampleActivity = (props) => {
     sample3: 1.8,
   });
 
+  const validWaterSample = ["water_sample2", "water_sample4", "water_sample5"];
+
   let dndRef = createRef(null);
   let activeElement = createRef(null);
   const popButton = useRef(null);
+  const animationContainerRef = useRef(null);
 
   const toggleHotspotPopupHandler = (index) => {
     setShowPopup({
@@ -56,7 +70,6 @@ const WatersampleActivity = (props) => {
       cancel: false,
       containment: ".draggingArea",
       start: (event, ui) => {
-        console.log(event.target.dataset);
         activeElement = event;
       },
     });
@@ -67,18 +80,23 @@ const WatersampleActivity = (props) => {
     $(droppables).droppable({
       tolerance: "pointer",
       drop: (event, ui) => {
-        console.log(
-          "activeElement.type",
-          activeElement.target,
-          event.target.dataset
-        );
-        // if (droppedElements === null) {
-        //   setDroppedElements(activeElement.type || null);
-        //   setDisableDraggableButton(true);
-        //   toggleHotspotPopupHandler("hotspot_" + activeElement.type);
-        //   popButton.current.focus();
-        //   setSelectedSlide((val) => [...val, activeElement.type]);
-        // }
+        const { source, sourceclass } = activeElement?.target?.dataset;
+        const { target } = event?.target?.dataset;
+        if (source === "pipette") {
+          if (!validWaterSample.includes(target)) {
+            toggleHotspotPopupHandler("invalid_sample_test");
+          } else {
+            // setShowVideo(true);
+            setDroppedElements((val) => [
+              ...val,
+              {
+                type: source,
+                id: target,
+                class: sourceclass,
+              },
+            ]);
+          }
+        }
       },
     });
   };
@@ -88,17 +106,48 @@ const WatersampleActivity = (props) => {
     initiateDroppableElements();
   }, []);
 
+  useEffect(() => {
+    console.log("droppedElements", droppedElements);
+    const selectedWaterSample = droppedElements.filter(
+      (val) => val.type === "pipette"
+    );
+    if (selectedWaterSample.length >= 3) {
+      setDisableDraggableButton({
+        pipette: true,
+        cuvette: false,
+        open: false,
+        close: false,
+        start: true,
+        blank: true,
+      });
+    }
+  }, [droppedElements]);
+
   const arrowsEnterClick = (event) => {
     setAccessible(true);
     selectDraggable(event);
     activeElement = event;
   };
 
-  const dropOnList = () => {};
+  const dropOnList = (item) => {
+    if (selectedDraggable.source === "pipette") {
+      if (!validWaterSample.includes(item.id)) {
+        toggleHotspotPopupHandler("invalid_sample_test");
+      } else {
+        setDroppedElements((val) => [
+          ...val,
+          {
+            type: selectedDraggable.source,
+            id: item.id,
+            class: selectedDraggable.sourceclass,
+          },
+        ]);
+      }
+    }
+  };
 
   const toolTipShow = (e) => {
-    const div = e.currentTarget.previousSibling;
-    console.log("div", div);
+    const div = e.currentTarget.previousSibling.children[0];
     if (div && div.classList != undefined) {
       div.classList.add("show");
       div.setAttribute("aria-hidden", false);
@@ -118,6 +167,67 @@ const WatersampleActivity = (props) => {
       status: false,
       id: "",
     });
+  };
+
+  const videoEnded = () => {
+    setTimeout(() => {
+      setShowVideo(false);
+    });
+  };
+
+  const clickActionBtn = (id) => {
+    if (id === "open") {
+      openSpectrophotometer();
+    } else if (id === "close") {
+      closeSpectrophotometer();
+    } else if (id === "start") {
+      setTimeout(() => {
+        toggleHotspotPopupHandler("water_level_map");
+      }, 2000);
+      setDisableDraggableButton((val) => ({
+        ...val,
+        start: true,
+      }));
+    }
+  };
+
+  const openSpectrophotometer = () => {
+    animationContainerRef.current.classList.remove("hide");
+    animationContainerRef.current.classList.add("open", "start");
+    addEventListener();
+  };
+
+  const closeSpectrophotometer = () => {
+    animationContainerRef.current.classList.remove("hide");
+    animationContainerRef.current.classList.add("close", "start");
+    addEventListener();
+  };
+
+  const addEventListener = () => {
+    if (animationContainerRef && animationContainerRef.current) {
+      animationContainerRef.current.addEventListener("animationend", (e) => {
+        const classList = animationContainerRef.current.classList;
+        if (classList.contains("open")) {
+          setOpenCloseBtn("open");
+        } else if (classList.contains("close")) {
+          setOpenCloseBtn("close");
+          setDisableDraggableButton((val) => ({
+            ...val,
+            start: false,
+          }));
+        }
+        animationContainerRef.current.classList.remove(
+          "open",
+          "close",
+          "start"
+        );
+        animationContainerRef.current.classList.add("hide");
+        animationContainerRef.current.removeEventListener(
+          "animationend",
+          () => {}
+        );
+      });
+    }
   };
 
   return (
@@ -155,6 +265,19 @@ const WatersampleActivity = (props) => {
             {val.lable}
           </span>
         ))}
+        {showVideo ? (
+          <Video
+            src={videoUrl}
+            autoplay={true}
+            hidePlayBtn={true}
+            videoEnded={videoEnded}
+            updateAriaLiveText={updateAriaLiveText}
+            muted={true}
+            ariaLabel="The micropipette moves to pick up a pipette tip. It takes solution from the first test tube and then drops the solution on one spectrometer filament. The micropipette then drops the pipette tip in a cup. A new pipette tip is placed on the micropipette. The micropipette picks up solution from the second test tube and drops it on the other spectrometer filament. The tip is then dropped in a cup."
+          />
+        ) : (
+          ""
+        )}
         <AccessibleDnDList
           onClick={dropOnList}
           opened={isAccessible}
@@ -174,16 +297,21 @@ const WatersampleActivity = (props) => {
           );
         })}
         {tab3.slide3.draggable.map((val) => (
-          <div className={`${val.class}`} key={`draggable${val.id}`}>
+          <div
+            className={`${val.class} ${
+              disableDraggableButton[val.type] ? "hidden" : ""
+            }`}
+            key={`draggable${val.id}`}
+          >
             <div
               className={`draggable`}
               data-source={val.type}
-              data-class={val.class}
+              data-sourceclass={val.class}
               aria-hidden="true"
               onClick={(e) =>
                 arrowsEnterClick({
                   source: val.type,
-                  class: val.class,
+                  sourceclass: val.class,
                 })
               }
             >
@@ -194,13 +322,14 @@ const WatersampleActivity = (props) => {
               />
             </div>
             <button
+              className="dragingbtn12"
               data-source={val.type}
-              data-class={val.class}
-              disabled={disableDraggableButton}
+              data-sourceclass={val.class}
+              disabled={disableDraggableButton[val.type]}
               onClick={(e) =>
                 arrowsEnterClick({
                   source: val.type,
-                  class: val.class,
+                  sourceclass: val.class,
                 })
               }
               tabIndex={isPopupActive ? "-1" : null}
@@ -212,6 +341,28 @@ const WatersampleActivity = (props) => {
             ></button>
           </div>
         ))}
+        <div
+          ref={animationContainerRef}
+          className="spectrophotometer_animation"
+        />
+        {tab3.slide3.actionBtns.map((val) => (
+          <button
+            key={`action_btn_${val.id}`}
+            className={`action_btn ${val.class} ${
+              val.id === "open" || val.id === "close"
+                ? openCloseBtn === val.id
+                  ? "hide"
+                  : ""
+                : ""
+            }`}
+            disabled={disableDraggableButton[val.id]}
+            onClick={(e) => clickActionBtn(val.id)}
+            tabIndex={isPopupActive ? "-1" : null}
+            aria-label={val.label}
+          >
+            {val.lable}
+          </button>
+        ))}
       </div>
       <div
         className={`discover-alert-popup ${!showPopup.status ? "hidden" : ""}`}
@@ -219,6 +370,14 @@ const WatersampleActivity = (props) => {
         <div className="popup-container">
           <div className="header">
             <div className="close_action">
+              <div>
+                <Tooltip
+                  title={popups.closeButton}
+                  classes="Close"
+                  id={popups.closeButton}
+                  position="left"
+                />
+              </div>
               <button
                 type="button"
                 aria-label={popups.closeButton}
@@ -236,12 +395,6 @@ const WatersampleActivity = (props) => {
                     : toolTipShow(e);
                 }}
                 onBlur={(e) => toolTipHide(e)}
-              />
-              <Tooltip
-                title={popups.closeButton}
-                classes="Close"
-                id={popups.closeButton}
-                position="left"
               />
             </div>
           </div>

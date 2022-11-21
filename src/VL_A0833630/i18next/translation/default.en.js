@@ -288,6 +288,28 @@ export default {
           class: "water_sample_lable6",
         },
       ],
+      actionBtns: [
+        {
+          id: "open",
+          class: "spectro_open_btn",
+          lable: "Open",
+        },
+        {
+          id: "close",
+          class: "spectro_close_btn",
+          lable: "Close",
+        },
+        {
+          id: "start",
+          class: "spectr_start_btn",
+          lable: "Start",
+        },
+        {
+          id: "blank",
+          class: "spectr_blank_btn",
+          lable: "Blank",
+        },
+      ],
     },
     resetLiveText: "Discover tab has been reset",
     dropzones: [

@@ -8,6 +8,16 @@
 
     // padding: 10px;
 
+    .video-container {
+      height: 636px;
+      width: 870px;
+      .play-icon {
+        &.hide {
+          display: none;
+        }
+      }
+    }
+
     .vl-indroduce-footer {
       background-color: #f7f7f7;
       width: 100%;
@@ -311,32 +321,32 @@
                   }
                   &.water_sample2 {
                     a {
-                      bottom: 0x;
-                      left: 190px;
+                      top: 258px;
+                      left: 208px;
                     }
                   }
                   &.water_sample3 {
                     a {
-                      bottom: 276px;
-                      left: 312px;
+                      top: 258px;
+                      left: 270px;
                     }
                   }
                   &.water_sample4 {
                     a {
-                      bottom: 182px;
-                      left: 162px;
+                      top: 352px;
+                      left: 120px;
                     }
                   }
                   &.water_sample5 {
                     a {
-                      bottom: 182px;
-                      left: 224px;
+                      top: 352px;
+                      left: 182px;
                     }
                   }
                   &.water_sample6 {
                     a {
-                      bottom: 182px;
-                      left: 286px;
+                      top: 352px;
+                      left: 244px;
                     }
                   }
                 }
@@ -470,6 +480,9 @@
               }
             }
             .pipette_dragging {
+              &.hidden {
+                display: none;
+              }
               div {
                 background-image: url(../assets/images/explore/activity3/pipette.png);
                 background-size: 100%;
@@ -495,6 +508,87 @@
                 &:hover {
                   box-shadow: none !important;
                 }
+              }
+            }
+            .spectrophotometer_animation {
+              width: 1085px;
+              height: 366px;
+              transform: scale(0.5);
+              position: absolute;
+              background-repeat: no-repeat;
+              top: 85px;
+              left: -262px;
+              &.hide {
+                display: none;
+              }
+              &.open {
+                background-image: url(../assets/images/explore/activity3/animation/sprite_4_big_1.png);
+                &.start {
+                  animation: spectrophotometer_open 5s steps(39) forwards;
+                  animation-play-state: running;
+                }
+                &.paused {
+                  animation-play-state: paused;
+                }
+                &.resume {
+                  animation-play-state: running;
+                }
+                &.end {
+                  background-image: url(../assets/images/explore/activity3/animation/sprite_4_big_1.png);
+                }
+              }
+              &.close {
+                background-image: url(../assets/images/explore/activity3/animation/sprite_4_big_1.png);
+                &.start {
+                  animation: spectrophotometer_open 5s steps(39) forwards;
+                  animation-play-state: running;
+                }
+                &.paused {
+                  animation-play-state: paused;
+                }
+                &.resume {
+                  animation-play-state: running;
+                }
+                &.end {
+                  background-image: url(../assets/images/explore/activity3/animation/sprite_4_big_1.png);
+                }
+              }
+            }
+
+            @keyframes spectrophotometer_open {
+              from {
+                background-position: 0;
+              }
+              to {
+                background-position: -42315px;
+              }
+            }
+            @keyframes spectrophotometer_close {
+              from {
+                background-position: 0;
+              }
+              to {
+                background-position: -42315px;
+              }
+            }
+            .action_btn {
+              position: absolute;
+              right: 70px;
+              width: 96px;
+              &.hide {
+                display: none;
+              }
+              &.spectro_open_btn {
+                top: 200px;
+              }
+              &.spectro_close_btn {
+                top: 200px;
+              }
+              &.spectr_start_btn {
+                top: 260px;
+              }
+              &.spectr_blank_btn {
+                top: 320px;
               }
             }
           }
